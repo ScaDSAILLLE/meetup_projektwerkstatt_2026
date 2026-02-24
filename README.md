@@ -53,12 +53,6 @@ Fokus liegt auf Anwendung, Ideenfindung und schnellem Prototyping.
 
 ---
 
-## Goodie
-
-Das Startup **FEED** stellt sich vor und bringt eine Demo mit!
-
----
-
 ## Über die Reihe
 
 Die Projektwerkstatt findet alle zwei Monate statt.  
@@ -133,16 +127,6 @@ Testen mit:
 ```bash
 ollama run qwen3-vl:2b
 ```
-
----
-
-## Mitmachen
-
-**Anmeldung:** Frei, kein Ticket erforderlich  
-**Ort:** ScaDS.AI Living Lab  
-**Datum:** Siehe Event-Details
-
-Bei Fragen: kontakt@scads.ai
 
 ---
 
