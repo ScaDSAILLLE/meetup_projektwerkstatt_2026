@@ -179,3 +179,8 @@ cython_debug/
 #  refer to https://docs.cursor.com/context/ignore-files
 .cursorignore
 .cursorindexingignore
+
+# OpenCode
+#  AGENTS.md contains project-specific instructions for AI coding agents
+#  May contain sensitive info or user-specific paths
+AGENTS.md
