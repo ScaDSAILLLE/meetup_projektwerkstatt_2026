@@ -1,6 +1,20 @@
-# OpenCode Usage – Prompt-Playbook
+# OpenCode – Prompt-Playbook
 
-## Der Einstieg
+## Setup
+
+- Anleitung: [`setup.md`](setup.md)
+
+## Tags
+
+- opencode
+- plan-mode
+- build-mode
+- prompt-playbook
+- workflow
+
+## Usage
+
+### Der Einstieg
 
 OpenCode ist ein AI-Coding-Agent, der wie ein Junior-Developer mit dir zusammenarbeitet. Er kann:
 - Code erklären und verstehen
@@ -11,7 +25,7 @@ OpenCode ist ein AI-Coding-Agent, der wie ein Junior-Developer mit dir zusammena
 
 ---
 
-## Wichtige Tastenkürzel
+### Wichtige Tastenkürzel
 
 | Taste | Funktion |
 |-------|----------|
@@ -25,7 +39,7 @@ OpenCode ist ein AI-Coding-Agent, der wie ein Junior-Developer mit dir zusammena
 
 ---
 
-## Plan-Modus (WICHTIG!)
+### Plan-Modus (WICHTIG!)
 
 ### Warum Plan-Modus?
 
@@ -53,7 +67,7 @@ Der **Plan-Modus** ist der beste Freund beim Experimentieren:
 
 ---
 
-## Gute Prompts schreiben
+### Gute Prompts schreiben
 
 ### ✅ Gute Beispiele
 
@@ -84,7 +98,7 @@ Fix den Bug
 
 ---
 
-## Dateien referenzieren mit @
+### Dateien referenzieren mit @
 
 Nutze `@`, um Dateien direkt zu referenzieren:
 
@@ -98,7 +112,7 @@ Was passiert in @utils/helper.py:45 ?
 
 ---
 
-## Bilder einfügen
+### Bilder einfügen
 
 Du kannst **Bilder in das Terminal ziehen** – OpenCode analysiert sie!
 
@@ -109,7 +123,7 @@ Nützlich für:
 
 ---
 
-## Fehler rückgängig machen
+### Fehler rückgängig machen
 
 ```
 /undo  # Eine Änderung zurück
@@ -119,7 +133,7 @@ Nützlich für:
 
 ---
 
-## Workflow für dieses Projekt
+### Workflow für dieses Projekt
 
 ### 1. Wähle ein Beispielprojekt
 
@@ -158,7 +172,7 @@ Kannst du mir erklären was du gemacht hast?
 
 ---
 
-## Best Practices
+### Best Practices
 
 ### 1. Nutze den Plan-Modus für neue Ideen
 - Keine Angst vor versehentlichen Änderungen
@@ -183,7 +197,7 @@ Kannst du mir erklären was du gemacht hast?
 
 ---
 
-## Befehls-Referenz
+### Befehls-Referenz
 
 | Befehl | Beschreibung |
 |--------|--------------|
@@ -196,7 +210,7 @@ Kannst du mir erklären was du gemacht hast?
 
 ---
 
-## Troubleshooting
+### Troubleshooting
 
 ### "OpenCode kann nicht auf Dateien zugreifen"
 → Stelle sicher, dass du im richtigen Verzeichnis bist und `/init` ausgeführt hast
@@ -209,7 +223,7 @@ Kannst du mir erklären was du gemacht hast?
 
 ---
 
-## Mehr Infos
+### Mehr Infos
 
 - Offizielle Docs: https://opencode.ai/docs
 - Discord: https://opencode.ai/discord

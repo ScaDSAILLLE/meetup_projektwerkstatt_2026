@@ -1,8 +1,23 @@
 # Qwen VL Scene Understanding – Prompt-Playbook
 
-## Überblick
+## Setup
 
-In diesem Projekt nutzen wir **qwen3-vl:2b**, ein Vision-Language-Modell das lokal auf der CPU läuft. Es kann:
+- Anleitung: [`setup.md`](setup.md)
+
+## Tags
+
+- qwen-vl
+- kiara-api
+- ollama
+- scene-understanding
+- prompt-playbook
+
+## Usage
+
+### Überblick
+
+In diesem Projekt nutzen wir **Qwen VL** lokal via Ollama oder remote via **KIARA API**.
+Das Modell kann:
 - Bilder beschreiben
 - Objekte erkennen
 - Fragen zu Bildern beantworten
@@ -10,7 +25,7 @@ In diesem Projekt nutzen wir **qwen3-vl:2b**, ein Vision-Language-Modell das lok
 
 ---
 
-## Die Beispiel-Codes
+### Die Beispiel-Codes
 
 Alle Beispiele liegen in [`beispiele/`](beispiele/):
 
@@ -19,9 +34,29 @@ beispiele/
 └── scene_understanding.py   # Bildanalyse mit qwen3-vl
 ```
 
+### Lokal vs. KIARA API
+
+Der Beispiel-Code kann entweder lokal (Ollama) oder via KIARA API laufen.
+
+**Lokal (Ollama):**
+```bash
+python beispiele/scene_understanding.py /pfad/zum/bild.jpg
+```
+
+**KIARA API:**
+```bash
+python beispiele/scene_understanding.py /pfad/zum/bild.jpg \
+  --backend kiara \
+  --kiara-model qwen3-vl-30b-a3b-instruct
+```
+
+Voraussetzung: `KIARA_API_KEY` ist als System-Umgebungsvariable gesetzt
+(z. B. via `setup.bat`). Optional: `KIARA_API_BASE` zum Überschreiben der Base-URL.
+Es wird **keine** `.env` benötigt.
+
 ---
 
-## Prompt-Playbook für VLMs
+### Prompt-Playbook für VLMs
 
 ### 1. Code verstehen
 
@@ -70,7 +105,7 @@ prüfen und den Bug fixen?
 
 ---
 
-## Workflow-Vorschlag
+### Workflow-Vorschlag
 
 ### Phase 1: Verstehen (10 min)
 
@@ -110,7 +145,7 @@ prüfen und den Bug fixen?
 
 ---
 
-## Nützliche Prompts
+### Nützliche Prompts
 
 ### "Was siehst du?"
 
@@ -141,7 +176,7 @@ gleich, was ist unterschiedlich?
 
 ---
 
-## Best Practices
+### Best Practices
 
 ### 1. Starte im Plan-Modus
 - Keine versehentlichen Änderungen
@@ -165,7 +200,7 @@ gleich, was ist unterschiedlich?
 
 ---
 
-## Erweiterungsideen
+### Erweiterungsideen
 
 ### Für Fortgeschrittene
 
@@ -183,7 +218,7 @@ gleich, was ist unterschiedlich?
 
 ---
 
-## Mehr Infos
+### Mehr Infos
 
 - Ollama: https://ollama.ai/
 - Qwen VL: https://qwenlm.github.io/
@@ -191,7 +226,7 @@ gleich, was ist unterschiedlich?
 
 ---
 
-## Performance-Tipps
+### Performance-Tipps
 
 | Problem | Lösung |
 |---------|--------|
@@ -202,7 +237,7 @@ gleich, was ist unterschiedlich?
 
 ---
 
-## Troubleshooting
+### Troubleshooting
 
 ### "ollama not running"
 → `ollama serve` in separatem Terminal starten
@@ -215,7 +250,7 @@ gleich, was ist unterschiedlich?
 
 ---
 
-## Weiter geht's
+### Weiter geht's
 
 - Theoretischer Hintergrund: [`2_computer_vision_intro/`](../2_computer_vision_intro/)
 - Tool-Setup: [`1_opencode/`](../1_opencode/)

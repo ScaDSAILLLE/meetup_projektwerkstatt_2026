@@ -167,6 +167,6 @@ Siehe [`4_qwen_vl_scene/`](../4_qwen_vl_scene/)
 ## Nächste Schritte
 
 1. **Tool-Setup:** [`1_opencode/setup.md`](../1_opencode/setup.md)
-2. **Prompt-Playbook:** [`1_opencode/usage.md`](../1_opencode/usage.md)
+2. **Prompt-Playbook:** [`1_opencode/README.md`](../1_opencode/README.md)
 3. **MediaPipe starten:** [`3_mediapipe_detection/`](../3_mediapipe_detection/)
 4. **VLM ausprobieren:** [`4_qwen_vl_scene/`](../4_qwen_vl_scene/)

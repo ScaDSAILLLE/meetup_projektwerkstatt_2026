@@ -1,6 +1,20 @@
-# MediaPipe Usage – Prompt-Playbook
+# MediaPipe – Prompt-Playbook
 
-## Überblick
+## Setup
+
+- Anleitung: [`setup.md`](setup.md)
+
+## Tags
+
+- mediapipe
+- hand-tracking
+- pose-estimation
+- face-detection
+- prompt-playbook
+
+## Usage
+
+### Überblick
 
 MediaPipe ist ein Framework von Google für Echtzeit-Computer-Vision. In diesem Projekt findest du Beispiele für:
 - Face Detection
@@ -9,7 +23,7 @@ MediaPipe ist ein Framework von Google für Echtzeit-Computer-Vision. In diesem 
 
 ---
 
-## Die Beispiel-Codes
+### Die Beispiel-Codes
 
 Alle Beispiele liegen in [`beispiele/`](beispiele/):
 
@@ -22,7 +36,7 @@ beispiele/
 
 ---
 
-## Prompt-Playbook für MediaPipe
+### Prompt-Playbook für MediaPipe
 
 ### 1. Code verstehen
 
@@ -71,7 +85,7 @@ den Code prüfen und den Bug fixen?
 
 ---
 
-## Workflow-Vorschlag
+### Workflow-Vorschlag
 
 ### Phase 1: Verstehen (10 min)
 
@@ -110,7 +124,7 @@ den Code prüfen und den Bug fixen?
 
 ---
 
-## Nützliche Prompts
+### Nützliche Prompts
 
 ### "Was kann ich damit machen?"
 
@@ -138,7 +152,7 @@ WebSocket-Stream einbinden kann.
 
 ---
 
-## Best Practices
+### Best Practices
 
 ### 1. Starte im Plan-Modus
 - Keine versehentlichen Änderungen
@@ -160,7 +174,7 @@ WebSocket-Stream einbinden kann.
 
 ---
 
-## Erweiterungsideen
+### Erweiterungsideen
 
 ### Für Fortgeschrittene
 
@@ -178,7 +192,7 @@ WebSocket-Stream einbinden kann.
 
 ---
 
-## Mehr Infos
+### Mehr Infos
 
 - MediaPipe Docs: https://google.github.io/mediapipe/
 - MediaPipe GitHub: https://github.com/google/mediapipe
@@ -186,7 +200,7 @@ WebSocket-Stream einbinden kann.
 
 ---
 
-## Troubleshooting
+### Troubleshooting
 
 ### "cv2.imshow funktioniert nicht"
 → Nutze `cv2.imwrite()` zum Speichern oder nutze eine Display-Alternative
@@ -199,7 +213,7 @@ WebSocket-Stream einbinden kann.
 
 ---
 
-## Weiter geht's
+### Weiter geht's
 
 - Theoretischer Hintergrund: [`2_computer_vision_intro/`](../2_computer_vision_intro/)
 - Tool-Setup: [`1_opencode/`](../1_opencode/)

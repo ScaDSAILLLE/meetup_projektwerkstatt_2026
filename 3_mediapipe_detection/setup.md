@@ -108,5 +108,5 @@ print("Bild gespeichert")
 
 ## Nächste Schritte
 
-- Siehe [`usage.md`](usage.md) für das Prompt-Playbook
+- Siehe [`README.md`](README.md) für das Prompt-Playbook
 - Code-Beispiele: [`beispiele/`](beispiele/)

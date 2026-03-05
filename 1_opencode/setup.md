@@ -132,5 +132,5 @@ opencode --version
 
 ## Nächste Schritte
 
-- Siehe [`usage.md`](usage.md) für das Prompt-Playbook
+- Siehe [`README.md`](README.md) für das Prompt-Playbook
 - Projektstruktur: Siehe Haupt-[`README.md`](../README.md)

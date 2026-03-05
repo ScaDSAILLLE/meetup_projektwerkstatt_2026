@@ -2,7 +2,7 @@
 
 ## Voraussetzungen
 
-- Ollama (lokal installiert)
+- Ollama (lokal installiert) oder KIARA API Key
 - Python 3.8+
 - Bilddateien für Analyse (oder Webcam)
 
@@ -46,7 +46,7 @@ uv init vlm_demo
 cd vlm_demo
 
 # Dependencies installieren
-uv add ollama requests pillow
+uv add ollama requests pillow python-dotenv
 ```
 
 ODER im Workshop-Verzeichnis:
@@ -54,8 +54,21 @@ ODER im Workshop-Verzeichnis:
 ```bash
 cd 4_qwen_vl_scene
 
-uv add ollama requests pillow
+uv add ollama requests pillow python-dotenv
 ```
+
+---
+
+## KIARA API (optional)
+
+Wenn du den Remote-Zugang nutzen willst, setze den Key als
+System-Umgebungsvariable (z. B. via `setup.bat`). Es wird **keine** `.env` benötigt.
+
+- Base URL: `https://kiara.sc.uni-leipzig.de/api/v1`
+- Modell: `qwen3-vl-30b-a3b-instruct`
+- Env-Var: `KIARA_API_KEY`
+
+Optional kannst du die Base URL mit `KIARA_API_BASE` überschreiben.
 
 ---
 
@@ -105,6 +118,16 @@ response = ollama.chat(
 print(response['message']['content'])
 ```
 
+### KIARA API Test
+
+Voraussetzung: `KIARA_API_KEY` ist gesetzt.
+
+```bash
+python beispiele/scene_understanding.py /pfad/zum/bild.jpg \
+  --backend kiara \
+  --kiara-model qwen3-vl-30b-a3b-instruct
+```
+
 ---
 
 ## Troubleshooting
@@ -136,5 +159,5 @@ ollama pull qwen3-vl:2b
 
 ## Nächste Schritte
 
-- Siehe [`usage.md`](usage.md) für das Prompt-Playbook
+- Siehe [`README.md`](README.md) für das Prompt-Playbook
 - Code-Beispiele: [`beispiele/`](beispiele/)
