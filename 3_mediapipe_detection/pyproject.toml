@@ -1,0 +1,10 @@
+[project]
+name = "meetup-mediapipe-detection"
+version = "0.1.0"
+description = "MediaPipe workshop examples (classic solutions API)"
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+    "mediapipe==0.10.14",
+    "opencv-python>=4.10,<5",
+]

@@ -140,6 +140,13 @@ def detect_pose_state(
 
 def main() -> None:
     """Run pose estimation on webcam."""
+    if not hasattr(mp, "solutions"):
+        print("Error: mediapipe installation is missing 'solutions'.")
+        print(
+            "Tip: use Python 3.11+ and reinstall mediapipe==0.10.14 in the active venv."
+        )
+        return
+
     mp_pose = mp.solutions.pose
     pose = mp_pose.Pose(
         static_image_mode=False,

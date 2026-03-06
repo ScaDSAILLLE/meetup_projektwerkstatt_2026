@@ -1,5 +1,12 @@
 # MediaPipe – Prompt-Playbook
 
+Dieser Bereich zeigt, wie klassische Computer-Vision(CV)-Pipelines mit MediaPipe aufgebaut sind.
+MediaPipe arbeitet mit vortrainierten Echtzeit-Modellen (Face, Hands, Pose) und liefert Landmarken,
+die du direkt für Interaktionen, Gestensteuerung und einfache Prototypen nutzen kannst.
+OpenCV übernimmt dabei den Video-Input, die Bildvorverarbeitung und das Rendering der Overlays im Fenster.
+Die Kombination ist stark, weil OpenCV den stabilen Frame-Loop liefert und MediaPipe darauf präzise CV-Inferenz in Echtzeit ausführt.
+Der Fokus liegt auf schneller lokaler Ausführung per Webcam und einem klaren Einstieg in Detection-Workflows.
+
 ## Setup
 
 - Anleitung: [`setup.md`](setup.md)
@@ -20,6 +27,30 @@ MediaPipe ist ein Framework von Google für Echtzeit-Computer-Vision. In diesem 
 - Face Detection
 - Hand Tracking
 - Pose Estimation
+
+### Win11 Quickstart (Ausfuehren)
+
+```powershell
+uv venv .venv
+.venv\Scripts\activate
+uv sync
+
+uv run python beispiele/face_detection.py
+```
+
+Fallback bei Python-Problemen:
+
+```powershell
+uv venv .venv --python 3.11
+```
+
+Nutze die Befehle im Ordner `3_mediapipe_detection/`, nicht in `beispiele/`.
+
+Wenn du lieber ein eigenes Entry-Script `app.py` nutzt:
+
+```powershell
+uv run python app.py
+```
 
 ---
 
@@ -43,6 +74,11 @@ beispiele/
 **Im Plan-Modus starten!**
 
 ```
+Erkläre mir was Mediapipe ist/
+Erkläre mir, was OpenCV ist.
+```
+
+```
 Erkläre mir wie @beispiele/face_detection.py funktioniert.
 Was macht die detect_faces() Funktion?
 ```
@@ -53,8 +89,20 @@ Was macht die detect_faces() Funktion?
 
 ```
 Wir wollen eine App bauen, die per Handgesten
-Mausbewegungen simuliert. Kannst du mir einen
-Plan zeigen, wie wir das umsetzen können?
+Mausbewegungen simuliert. Kannst du einen
+Plan erstellen, wie wir das umsetzen können?
+```
+
+```
+Wir wollen eine App bauen, die per Handgesten
+den Browser öffnet. Kannst du einen
+Plan erstellen, wie wir das umsetzen können?
+```
+
+```
+Wir wollen eine App bauen, die per Handgesten
+die Lautstärke am PC lauter und leiser machen kann. Kannst du einen
+Plan erstellen, wie wir das umsetzen können?
 ```
 
 ### 3. Features erweitern
@@ -142,7 +190,7 @@ läuft langsam. Was kann ich tun, um die
 Performance zu verbessern?
 ```
 
-### "Wie integriere ich in meine App?"
+### "Wie integriere ich das in meine App?"
 
 ```
 Ich habe eine Flask-Web-App. Zeig mir einen
@@ -156,7 +204,7 @@ WebSocket-Stream einbinden kann.
 
 ### 1. Starte im Plan-Modus
 - Keine versehentlichen Änderungen
-- Besserer Code durch Iteration
+- Besserer Code durch Iteration / "Task-Following"
 
 ### 2. Referenziere existierenden Code
 - `@beispiele/hand_tracking.py` macht es einfacher für OpenCode
@@ -166,7 +214,7 @@ WebSocket-Stream einbinden kann.
 - ✅ "Wenn Daumen und Zeigefinger sich berühren → Klick"
 
 ### 4. Nutze UV
-- Statt `pip install` → `uv add <paket>`
+- Statt `pip install` → `uv add <paket>` od. `uv pip install <paket>`
 
 ### 5. Teile Fehlermeldungen
 - Copy & Paste Fehler in den Prompt
@@ -194,7 +242,7 @@ WebSocket-Stream einbinden kann.
 
 ### Mehr Infos
 
-- MediaPipe Docs: https://google.github.io/mediapipe/
+- MediaPipe Docs: https://ai.google.dev/edge/mediapipe/solutions/guide?hl=de
 - MediaPipe GitHub: https://github.com/google/mediapipe
 - OpenCV: https://opencv.org/
 

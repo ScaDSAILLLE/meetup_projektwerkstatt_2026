@@ -226,5 +226,4 @@ Kannst du mir erklären was du gemacht hast?
 ### Mehr Infos
 
 - Offizielle Docs: https://opencode.ai/docs
-- Discord: https://opencode.ai/discord
 - GitHub: https://github.com/anomalyco/opencode

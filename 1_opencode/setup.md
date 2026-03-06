@@ -4,9 +4,9 @@
 
 ### Windows: WSL empfohlen!
 
-Für die beste Erfahrung mit OpenCode empfehlen wir **WSL (Windows Subsystem for Linux)** auf Windows 11.
+Für die beste Erfahrung mit OpenCode empfehlen wir **WSL (Windows Subsystem for Linux)** auf Windows 11. (Ist bereits aktiviert und eingerichtet: einfach in jedwedem Terminal `wsl` eingeben und ihr seid in einem Linux-Subsystem :))
 
-#### WSL installieren (falls nicht vorhanden)
+#### WSL installieren (falls nicht vorhanden) & für alle, die das eigens aufsetzen wollen/müssen:
 
 1. PowerShell als Administrator öffnen:
    ```powershell
@@ -24,7 +24,7 @@ Nach der WSL-Installation:
 # OpenCode installieren
 curl -fsSL https://opencode.ai/install | bash
 
-# Oder alternativ mit npm
+# Oder alternativ mit npm 8muss aber sicher auch erst installiert werden also Empfehlung: curl Befehl)
 npm install -g opencode-ai
 ```
 
@@ -43,6 +43,7 @@ brew install anomalyco/tap/opencode
 
 ### Direkt unter Windows (ohne WSL)
 
+Schau vorher bitte hier: https://opencode.ai/docs/de \
 Falls WSL nicht genutzt werden soll:
 
 ```powershell
@@ -58,7 +59,7 @@ choco install opencode
 
 ---
 
-## API-Keys konfigurieren
+## API-Keys konfigurieren (Auch bereits erledigt! NUR FÜR TN, die das eigens einrichten wollen.)
 
 ### Option 1: In OpenCode (empfohlen)
 
@@ -74,7 +75,7 @@ choco install opencode
 
 3. Provider auswählen (z.B. OpenAI, Anthropic)
 
-4. API-Key eingeben
+4. API-Key eingeben oder via Browser/Subscription connecten
 
 ### Option 2: Umgebungsvariablen
 
@@ -94,7 +95,7 @@ export KIARA_API_KEY="..."
 
 Unter Windows (CMD):
 ```cmd
-set OPENAI_API_KEY=sk-...
+setx OPENAI_API_KEY "sk-..."
 ```
 
 ---
@@ -106,8 +107,10 @@ set OPENAI_API_KEY=sk-...
    cd /pfad/zum/projekt
    ```
 
-2. OpenCode starten:
+2. (WSL &) OpenCode starten:
    ```bash
+   wsl
+   # in wsl:
    opencode
    ```
 
@@ -116,7 +119,7 @@ set OPENAI_API_KEY=sk-...
    /init
    ```
 
-   Dies erstellt eine `AGENTS.md`-Datei mit projektspezifischen Anweisungen.
+   Dies erstellt eine `AGENTS.md`-Datei mit projektspezifischen Anweisungen und schaut schon mal grob den Ordner durch.
 
 ---
 

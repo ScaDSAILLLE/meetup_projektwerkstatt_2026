@@ -58,6 +58,13 @@ def draw_faces(image: "cv2.Mat", boxes: List[Tuple[int, int, int, int]]) -> "cv2
 
 def main() -> None:
     """Run face detection on webcam."""
+    if not hasattr(mp, "solutions"):
+        print("Error: mediapipe installation is missing 'solutions'.")
+        print(
+            "Tip: use Python 3.11+ and reinstall mediapipe==0.10.14 in the active venv."
+        )
+        return
+
     mp_face_detection = mp.solutions.face_detection
     face_detection = mp_face_detection.FaceDetection(
         model_selection=0, min_detection_confidence=0.5

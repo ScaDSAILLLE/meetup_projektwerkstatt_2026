@@ -123,6 +123,13 @@ def detect_gesture(
 
 def main() -> None:
     """Run hand tracking on webcam."""
+    if not hasattr(mp, "solutions"):
+        print("Error: mediapipe installation is missing 'solutions'.")
+        print(
+            "Tip: use Python 3.11+ and reinstall mediapipe==0.10.14 in the active venv."
+        )
+        return
+
     mp_hands = mp.solutions.hands
     hands = mp_hands.Hands(
         static_image_mode=False,

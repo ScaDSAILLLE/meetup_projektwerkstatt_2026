@@ -42,9 +42,9 @@ def encode_image_data_url(image_path: str) -> str:
 def analyze_image_ollama(
     image_path: str,
     prompt: str = "Describe what's in this image in detail.",
-    model: str = "qwen3-vl:2b",
+    model: str = "qwen3.5:0.8b",
 ) -> str:
-    """Analyze an image using qwen3-vl with Ollama.
+    """Analyze an image using qwen3.5:0.8B (newest unified LLM/VLM, see: https://ollama.com/library/qwen3.5) with Ollama.
 
     Args:
         image_path: Path to image file
@@ -113,7 +113,7 @@ def analyze_image_kiara(
 def analyze_image(
     image_path: str,
     prompt: str = "Describe what's in this image in detail.",
-    model: str = "qwen3-vl:2b",
+    model: str = "qwen3.5:0.8b",
     backend: str = "ollama",
     kiara_model: str = "qwen3-vl-30b-a3b-instruct",
     api_base: Optional[str] = None,
@@ -128,7 +128,7 @@ def analyze_image(
 
 def detect_objects(
     image_path: str,
-    model: str = "qwen3-vl:2b",
+    model: str = "qwen3.5:0.8b",
     backend: str = "ollama",
     kiara_model: str = "qwen3-vl-30b-a3b-instruct",
 ) -> List[str]:
@@ -161,7 +161,7 @@ Do not add explanations or descriptions."""
 
 def describe_scene(
     image_path: str,
-    model: str = "qwen3-vl:2b",
+    model: str = "qwen3.5:0.8b",
     backend: str = "ollama",
     kiara_model: str = "qwen3-vl-30b-a3b-instruct",
 ) -> Dict[str, str]:
@@ -203,7 +203,7 @@ Format as simple bullet points."""
 
 def interactive_analysis(
     image_path: str,
-    model: str = "qwen3-vl:2b",
+    model: str = "qwen3.5:0.8b",
     backend: str = "ollama",
     kiara_model: str = "qwen3-vl-30b-a3b-instruct",
     api_base: Optional[str] = None,
@@ -267,7 +267,7 @@ def main() -> None:
         choices=["ollama", "kiara"],
         help="Backend to use",
     )
-    parser.add_argument("--model", default="qwen3-vl:2b", help="Ollama model to use")
+    parser.add_argument("--model", default="qwen3.5:0.8b", help="Ollama model to use")
     parser.add_argument(
         "--kiara-model",
         default="qwen3-vl-30b-a3b-instruct",

@@ -1,38 +1,29 @@
-# Qwen VL Scene Understanding Setup
+# Qwen3.5 / Qwen-VL Scene Understanding Setup
 
 ## Voraussetzungen
 
-- Ollama (lokal installiert) oder KIARA API Key
-- Python 3.8+
+- Ollama (lokal installiert) und/oder KIARA API Key (für heute bereits vorbereitet)
+- Python 3.10+
 - Bilddateien für Analyse (oder Webcam)
 
 ## Installation
 
 ### 1. Ollama installieren
 
-**Windows (PowerShell):**
-```powershell
-curl -L -o ollama-installer.exe https://ollama.ai/install.bat
-.\ollama-installer.exe
-```
+> s. Ollama-Website: https://ollama.com/
 
-**macOS / Linux:**
-```bash
-curl -fsSL https://ollama.ai/install.sh | sh
-```
 
 ### 2. Modell herunterladen
 
 ```bash
 # qwen3-vl:2b ist klein und läuft auf CPU
-ollama pull qwen3-vl:2b
+ollama pull qwen3.5:0.8b
 ```
 
 **Alternativen:**
 ```bash
 # Größere Modelle (brauchen mehr RAM)
-ollama pull llava
-ollama pull llava:7b
+siehe: https://ollama.com/search?c=vision
 ```
 
 ### 3. Python-Dependencies
@@ -41,20 +32,13 @@ ollama pull llava:7b
 # UV prüfen
 uv --version
 
+# Falls nicht installiert:
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
 # Projekt erstellen
-uv init vlm_demo
-cd vlm_demo
-
-# Dependencies installieren
-uv add ollama requests pillow python-dotenv
-```
-
-ODER im Workshop-Verzeichnis:
-
-```bash
-cd 4_qwen_vl_scene
-
-uv add ollama requests pillow python-dotenv
+uv venv .venv
+.venv\Scripts\activate
+uv sync
 ```
 
 ---
@@ -66,7 +50,7 @@ System-Umgebungsvariable (z. B. via `setup.bat`). Es wird **keine** `.env` benö
 
 - Base URL: `https://kiara.sc.uni-leipzig.de/api/v1`
 - Modell: `qwen3-vl-30b-a3b-instruct`
-- Env-Var: `KIARA_API_KEY`
+- Env-Var: `KIARA_API_KEY` (ist bereits gesetzt!)
 
 Optional kannst du die Base URL mit `KIARA_API_BASE` überschreiben.
 
@@ -74,14 +58,14 @@ Optional kannst du die Base URL mit `KIARA_API_BASE` überschreiben.
 
 ## Modell-Info
 
-### qwen3-vl:2b
+### qwen3.5:0.8b
 
 | Eigenschaft | Wert |
 |-------------|------|
-| Größe | ~2 GB |
-| RAM-Bedarf | ~4 GB |
+| Größe | ~1 GB |
+| RAM-Bedarf | ~2-3 GB |
 | CPU-only | ✅ Ja |
-|推理zeit | ~3-5s/Bild |
+|推理zeit | ~3-10s/Bild |
 
 ### Fähigkeiten
 
@@ -98,16 +82,20 @@ Optional kannst du die Base URL mit `KIARA_API_BASE` überschreiben.
 ### CLI-Test
 
 ```bash
-ollama run qwen3-vl:2b "Describe this image: /path/to/image.jpg"
+ollama run qwen3.5:0.8b "Describe this image: /path/to/image.jpg"
 ```
 
 ### Python-Test
+
+```bash
+uv run beispiele/scene_understanding.py /pfad/zum/bild.jpg
+```
 
 ```python
 import ollama
 
 response = ollama.chat(
-    model='qwen3-vl:2b',
+    model='qwen3.5:0.8b',
     messages=[{
         'role': 'user',
         'content': 'What is in this image?',
@@ -123,7 +111,7 @@ print(response['message']['content'])
 Voraussetzung: `KIARA_API_KEY` ist gesetzt.
 
 ```bash
-python beispiele/scene_understanding.py /pfad/zum/bild.jpg \
+uv run beispiele/scene_understanding.py /pfad/zum/bild.jpg \
   --backend kiara \
   --kiara-model qwen3-vl-30b-a3b-instruct
 ```
@@ -139,15 +127,16 @@ python beispiele/scene_understanding.py /pfad/zum/bild.jpg \
 
 ### "Model not found"
 
+> ggf. Ollama updaten / neu installieren (es gab zuletzt bugs... insb. bei Windows-Versionen.)
 ```bash
 ollama list
-ollama pull qwen3-vl:2b
+ollama pull qwen3.5:0.8b
 ```
 
 ### "Out of memory"
 
 - Bildgröße reduzieren
-- Kleineres Modell nutzen (qwen3-vl:2b statt 8b)
+- Unwahrscheinlich bei 0.8B Modell :)
 
 ### "Zu langsam"
 

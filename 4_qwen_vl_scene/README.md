@@ -1,4 +1,9 @@
-# Qwen VL Scene Understanding – Prompt-Playbook
+# Qwen /Qwen-VL Scene Understanding – Prompt-Playbook
+
+Hier geht es um Vision-Language-Modelle (VLMs), also Modelle, die Bildinhalte mit Sprache verknüpfen.
+Mit Qwen kannst du Szenen semantisch beschreiben, Fragen zu Bildern beantworten und Bildkontext interpretieren.
+Im Gegensatz zu klassischer Detection stehen hier flexible, promptbasierte Analysen im Vordergrund.
+Die Beispiele decken sowohl lokale Ausführung mit Ollama als auch API-Nutzung über KIARA ab.
 
 ## Setup
 
@@ -6,7 +11,7 @@
 
 ## Tags
 
-- qwen-vl
+- qwen3.5
 - kiara-api
 - ollama
 - scene-understanding
@@ -16,7 +21,7 @@
 
 ### Überblick
 
-In diesem Projekt nutzen wir **Qwen VL** lokal via Ollama oder remote via **KIARA API**.
+In diesem Projekt nutzen wir **Qwen3.5 (0.8B)** lokal via Ollama oder **Qwen3-VL-30B-A3B-Instruct** remote via **KIARA API**.
 Das Modell kann:
 - Bilder beschreiben
 - Objekte erkennen
@@ -31,7 +36,7 @@ Alle Beispiele liegen in [`beispiele/`](beispiele/):
 
 ```
 beispiele/
-└── scene_understanding.py   # Bildanalyse mit qwen3-vl
+└── scene_understanding.py   # Bildanalyse mit qwen3.5:0.8B
 ```
 
 ### Lokal vs. KIARA API
@@ -51,7 +56,7 @@ python beispiele/scene_understanding.py /pfad/zum/bild.jpg \
 ```
 
 Voraussetzung: `KIARA_API_KEY` ist als System-Umgebungsvariable gesetzt
-(z. B. via `setup.bat`). Optional: `KIARA_API_BASE` zum Überschreiben der Base-URL.
+(haben wir hier für die Projektwerkstatt heute natürlich für dich erledigt!). Optional: `KIARA_API_BASE` zum Überschreiben der Base-URL.
 Es wird **keine** `.env` benötigt.
 
 ---
@@ -60,7 +65,11 @@ Es wird **keine** `.env` benötigt.
 
 ### 1. Code verstehen
 
-**Im Plan-Modus starten!**
+**Im Plan-Modus starten! (`Tab` Taste drücken zum Modus-Wechsel)**
+
+```
+Was ist Qwen und was sind Vision Language Modelle (VLMs)?
+```
 
 ```
 Erkläre mir wie @beispiele/scene_understanding.py funktioniert.
@@ -91,8 +100,12 @@ einer Person im Bild "Person erkannt" ausgibt.
 
 ```
 MediaPipe erkennt Hand-Landmarks. Wie können wir
-qwen3-vl nutzen, um die erkannte Geste in
+Qwen3.5 lokal od. Qwen3-VL per API nutzen, um die erkannte Geste in
 natürlicher Sprache zu beschreiben?
+```
+
+```
+MediaPipe erkennt Hand-Landmarks, Gesichter oder Körperposen. Lass uns das nutzen und mit den VLMs (lokal oder remote) ein Spiel bauen, wie Schere-Stein-Papier. 
 ```
 
 ### 5. Debugging
@@ -112,6 +125,7 @@ prüfen und den Bug fixen?
 1. Starte OpenCode
 2. Frage:
    ```
+   Einstieg ins Thema VLMs; 
    Erkläre mir die Struktur von @beispiele/scene_understanding.py
    ```
 3. Lass dir den Code erklären
@@ -121,6 +135,7 @@ prüfen und den Bug fixen?
 1. Führe die Beispiele aus
 2. Teste mit eigenen Bildern
 3. Dokumentiere was funktioniert
+4. Geht etwas nicht? Lass es dir erklären und den Coding Agenten ggf. reparieren ("fixen"). Emnpfohlen ist ein Setup mit `Python` und dem Paketmanager `uv`.
 
 ### Phase 3: Erweitern (30 min)
 
@@ -140,7 +155,7 @@ prüfen und den Bug fixen?
 ### Phase 4: Bauen (30 min)
 
 1. Wechsle zu Build-Modus (`Tab`)
-2. Sag: "Go ahead and make the changes!"
+2. Schreib z.B.: "Leg los und implementiere das. Komm zurück, wenn du fertig bist oder zwischenzeitlich, wenn du Fragen hast. Erkläre mir anschließend, was du gemacht hast, erkläre den Code und schreib bitte auch eine Manual.md mit einer Nutzeranleitung."
 3. Teste das Ergebnis
 
 ---
@@ -188,15 +203,17 @@ gleich, was ist unterschiedlich?
 ### 3. Sei spezifisch bei Prompts
 - ❌ "Was ist das?"
 - ✅ "Erkenne alle Personen im Bild und beschreibe ihre Kleidung"
+- Gib genaue Anweisungen, z.B. was bearbeitet werden darf und was nicht, z.B.: "Bearbeite NUR den Code, lösche keine Beispielbilder." o.ä. 
 
 ### 4. Nutze UV
 - Statt `pip install` → `uv add <paket>`
+- alternativ mit aktiver virtuellen Umgebung (venv): `uv pip install <paket>`
 
 ### 5. Bilder vorher verkleinern
 - CPU ist langsam – kleinere Bilder = schnellere Antwort
 
 ### 6. Sei geduldig
-- ~3-5 Sekunden pro Bild auf CPU ist normal
+- ~5-10 Sekunden pro Bild auf CPU ist normal
 
 ---
 
@@ -220,8 +237,8 @@ gleich, was ist unterschiedlich?
 
 ### Mehr Infos
 
-- Ollama: https://ollama.ai/
-- Qwen VL: https://qwenlm.github.io/
+- Ollama: https://ollama.com/
+- Qwen / Qwen-VL: https://qwen.ai/research
 - Ollama Python API: https://github.com/ollama/ollama-python
 
 ---
@@ -246,7 +263,7 @@ gleich, was ist unterschiedlich?
 → Ollama ist nicht gestartet
 
 ### "model not found"
-→ `ollama pull qwen3-vl:2b`
+→ `ollama pull qwen3.5:0.8b` (ggf. Ollama update durchführen oder neu installieren, s. Ollama-Website)
 
 ---
 
