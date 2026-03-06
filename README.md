@@ -99,37 +99,6 @@ Entwickelt Ideen bis hin zum Service oder Startup oder nehmt euch Know-how, Code
 
 ---
 
-## Setup
-
-### Windows (WSL empfohlen!)
-
-Wir empfehlen die Nutzung von **WSL (Windows Subsystem for Linux)** für die beste Erfahrung mit OpenCode und den KI-Tools.
-
-1. **Setup-Skript** (Windows CMD/PowerShell):
-   ```cmd
-   .\setup.bat
-   ```
-   Oder manuell:
-   - Ollama installieren: `curl -L -o ollama-installer.exe https://ollama.ai/install.bat`
-   - OpenCode in WSL: `curl -fsSL https://opencode.ai/install | bash`
-   - UV: `curl -LsSf https://astral.sh/uv/install.sh | sh`
-
-2. **API-Keys setzen:**
-   - Siehe `.setup_example.bat` für Vorlage
-   - Oder direkt in der OpenCode-TUI mit `/connect`
-
-### Ollama Modelle
-
-Für CPU-only Nutzung empfehlen wir:
-- `qwen3-vl:2b` – Vision-Language-Modell, läuft auf CPU (~2GB RAM)
-
-Testen mit:
-```bash
-ollama run qwen3-vl:2b
-```
-
----
-
 ## Lizenz
 
 Workshop-Material: CC BY 4.0  
