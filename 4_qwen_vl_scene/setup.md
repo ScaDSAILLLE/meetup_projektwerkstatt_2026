@@ -16,7 +16,7 @@
 ### 2. Modell herunterladen
 
 ```bash
-# qwen3-vl:2b ist klein und läuft auf CPU
+# qwen3.5:0.8b ist klein und läuft auf CPU
 ollama pull qwen3.5:0.8b
 ```
 

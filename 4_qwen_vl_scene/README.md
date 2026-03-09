@@ -45,12 +45,27 @@ Der Beispiel-Code kann entweder lokal (Ollama) oder via KIARA API laufen.
 
 **Lokal (Ollama):**
 ```bash
-python beispiele/scene_understanding.py /pfad/zum/bild.jpg
+uv run beispiele/scene_understanding.py /pfad/zum/bild.jpg
 ```
+
+**Lokal (Ollama Chat-UI, ohne Coding):**
+
+Wenn du nicht ueber CLI oder Python arbeiten willst, kannst du auch direkt das Ollama Chat-Fenster nutzen:
+
+1. Ollama starten und das Chat-Fenster oeffnen.
+2. Unten rechts als Modell `qwen3.5:0.8b` auswaehlen.
+3. Falls das Modell noch fehlt, den Download im UI starten (oder alternativ im Terminal: `ollama pull qwen3.5:0.8b`).
+4. Bild per Drag-and-drop oder Upload in den Chat legen.
+5. Prompt eingeben, z. B.:
+   ```
+   Was ist in diesem Bild zu sehen? Beschreibe die wichtigsten Objekte und die Stimmung.
+   ```
+
+So kannst du die Bildanalyse komplett in einer UI nutzen, auch ohne Programmierkenntnisse.
 
 **KIARA API:**
 ```bash
-python beispiele/scene_understanding.py /pfad/zum/bild.jpg \
+uv run beispiele/scene_understanding.py /pfad/zum/bild.jpg \
   --backend kiara \
   --kiara-model qwen3-vl-30b-a3b-instruct
 ```
