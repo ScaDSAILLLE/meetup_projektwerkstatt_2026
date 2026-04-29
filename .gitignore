@@ -184,5 +184,5 @@ cython_debug/
 #  AGENTS.md contains project-specific instructions for AI coding agents
 #  May contain sensitive info or user-specific paths
 AGENTS.md
-.setup_example.bat
+./.setup_example.bat
 uv.lock
