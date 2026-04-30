@@ -1,6 +1,6 @@
-# KI-Projektwerkstatt #1 2026
+# KI-Projektwerkstatt #2 2026
 
-## Computer Vision – Pose & Gesture Detection
+## OpenCode-Produktivsetups & Bring Your Ideas
 
 Angewandte KI. Hands-on. Offen für alle.
 
@@ -22,43 +22,38 @@ Einmalig teilnehmen oder über das Jahr hinweg kontinuierlich an einem Projekt a
 **Ihr bringt:**
 - Ideen – oder einfach Neugier
 - Lust auf Ausprobieren
-- Optional: eigenes Setup
+- Inputs und eure Setups / Learnings
+- Eure Erfahrung(en), best practices, Projekte
 
 ---
 
-## Format
+## Heutige Projektwerkstatt am 05.05.2026:
 
 Nach einer kurzen Einführung und thematischem Input arbeitet ihr selbstständig – allein oder im Team an euren Ideen oder an Beispielen, die wir aufbereiten.  
 AI-Pair-Programming und Agentic Coding sind ausdrücklich erwünscht – wir bereiten ein Setup mit u.a. OpenCode vor. Testet es aus, lernt programmieren oder verfeinert euer eigenes Produktiv-Setup.
 
 Zum Abschluss gibt es freiwillige Kurz-Demos (3–5 Minuten) für alle, die zeigen möchten, woran sie gearbeitet haben sowie angeregte Diskussionen zum Thema, zum State-of-the-Art und allem, was noch interessiert.
 
+Ziel ist es, angewandte KI gemeinsam zu entwickeln – vom Experiment bis zum tragfähigen Projekt.
+
+Entwickelt Ideen bis hin zum Service oder Startup oder nehmt euch Know-how, Code, Kontakte und Erfahrung mit. Auch Unternehmen, Dev-Teams oder Freelancer sind angesprochen, die KI bereits im Alltag erfolgreich einsetzen, kürzlich damit begonnen haben oder vorhaben, dies demnächst zu tun.
+
 Freies Kommen und Gehen ist möglich.
 
 ---
 
-## Fokusthema: Pose & Gesture Detection mit Computer Vision
+## Fokusthema: OpenCode produktiv nutzen + lokale KI-Setups
 
-Für alle, die noch keine eigene Idee mitbringen oder schon länger mit Computer-Vision-Systemen experimentieren wollten, bieten wir einen thematischen Einstieg:
+Für alle, die noch keine eigene Idee mitbringen oder ihr Setup verbessern möchten, bieten wir einen thematischen Einstieg:
 
-Wir zeigen, wie sich mit bestehenden Modellen (z. B. MediaPipe) Körperposen und Handgesten erkennen und in einfache Anwendungen überführen lassen. Was können solche spezialisierten Detection-Modelle, wofür kann man sie einsetzen und wie haben sich Use-Cases auch durch das Aufkommen von Vision-Language-Models verändert?
+Kurze Input-Pitches zeigen produktive Arbeitsweisen & Setups mit OpenCode: vom Install bis zu wiederverwendbaren Agent-Workflows im Alltag. Zusätzlich gibt es die Möglichkeit, eine lokale multimodale Gemma-4-Demo auszuprobieren und zu verstehen, wie ein lokaler Agent mit Text, Bild und Audio arbeitet.
 
-### Mögliche Beispiele:
-- Gestensteuerung für Apps/Desktop
-- Visuelle Trigger & Kontrollmechanismen
-- Explorative Use-Case-Entwicklung
 
-Es stehen vorbereitete Repos für Setup & minimale Startprojekte sowie weiterführende Ressourcen bereit.  
-Fokus liegt auf Anwendung, Ideenfindung und schnellem Prototyping.
+Dann heißt es: **Bring-your-idea** 
+Bringt eigene Use Cases, findet euch in Teams oder alleine und setzt Mini-Prototypen um!
 
----
-
-## Über die Reihe
-
-Die Projektwerkstatt findet alle zwei Monate statt.  
-Ziel ist es, angewandte KI gemeinsam zu entwickeln – vom Experiment bis zum tragfähigen Projekt.
-
-Entwickelt Ideen bis hin zum Service oder Startup oder nehmt euch Know-how, Code, Kontakte und Erfahrung mit. Auch Unternehmen, Dev-Teams oder Freelancer sind angesprochen, die KI bereits im Alltag erfolgreich einsetzen, kürzlich damit begonnen haben oder vorhaben, dies demnächst zu tun.
+Es stehen vorbereitete Repos für Setup und Startprojekte sowie weiterführende Ressourcen bereit hier im Repo.
+Fokus liegt auf Ideenfindung, Prototyping & Austausch.
 
 ---
 
@@ -67,13 +62,12 @@ Entwickelt Ideen bis hin zum Service oder Startup oder nehmt euch Know-how, Code
 | Zeit | Programm |
 |------|----------|
 | 15:45 | Doors Open & Ankommen |
-| 16:00 | Begrüßung & Vorstellung ScaDS.AI |
-| 16:10 | Startup Pitch & Demo: FEED |
-| 16:25 | Input: Computer Vision & Pose/Gesture Detection |
-| 16:40 | Setup & Ressourcen |
-| 16:45–18:15 | Projektphase / Werkstatt |
+| 16:00 | Begrüßung & Vorstellung ScaDS.AI Dresden/Leipzig |
+| 16:10 | Input Pitches & Demos: OpenCode-Produktivsetups |
+| 16:30 | Setup & Ressourcen |
+| 16:35–18:15 | Projektphase / Werkstatt |
 | 18:15–18:30 | Kurzpräsentationen & Austausch (freiwillig) |
-| ab 18:30 | OpenLab, Networking and Demo-Session |
+| 18:30–19:00 | OpenLab und Networking |
 
 ---
 
@@ -83,19 +77,16 @@ Entwickelt Ideen bis hin zum Service oder Startup oder nehmt euch Know-how, Code
 
 - **OpenCode** – AI-Coding-Agent für Terminal/IDE
   - Siehe [`1_opencode/`](1_opencode/)
+
+- **Lokale multimodale Gemma-4-Demo** – LiteRT-LM + Gradio
+  - Siehe [`2_test_gemma4_multimodal/`](2_test_gemma4_multimodal/)
   
-### Beispielprojekte
+### Arbeitsoptionen in der Werkstatt
 
-- **MediaPipe Detection** – Face, Hand, Pose Detection
-  - Siehe [`3_mediapipe_detection/`](3_mediapipe_detection/)
-  
-- **Vision Language Models** – Scene Understanding mit VLMs
-  - Siehe [`4_qwen_vl_scene/`](4_qwen_vl_scene/)
-
-### Theoretischer Input
-
-- **Computer Vision Intro** – Grundlagen und Konzepte
-  - Siehe [`2_computer_vision_intro/`](2_computer_vision_intro/)
+- **Bring your idea** – Eigene Idee, bestehender Workflow oder konkreter Use Case
+- **Workshop-Laptops nutzen** – Vorbereitete Setups mit APIs und Tokens direkt verwenden
+- **Eigenes Setup aufbauen** – Mit [`1_opencode/`](1_opencode/) selbst produktiv einrichten
+- **Gemma 4 lokal testen** – Mit [`2_test_gemma4_multimodal/`](2_test_gemma4_multimodal/) lokalen Agent ausprobieren
 
 ---
 

@@ -1,0 +1,17 @@
+[project]
+name = "local-ai-chat"
+version = "0.1.0"
+description = "Local multimodal Gradio chat against LiteRT-LM"
+readme = "README.md"
+requires-python = ">=3.12,<3.14"
+dependencies = [
+    "gradio",
+    "openai",
+    "fastapi",
+    "uvicorn[standard]",
+    "litert-lm-api-nightly",
+    "huggingface-hub",
+]
+
+[tool.uv]
+package = false
