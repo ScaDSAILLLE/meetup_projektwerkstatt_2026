@@ -19,6 +19,8 @@ Nachlese:
 KI ist nützlich und erleichtert sicher einiges. Trotzdem sollten wir wohl genauer hinschauen, wie wir das ganze nutzen und einbinden wollen und auf was (Stichwort eigene Daten) wir Zugriff geben möchten/sollten!
 Rein lokale (offline) Setups bringen hier eigentlich alles mit, was es braucht, um sowas eigens, sicher und konfigierbar zu betreiben. Aktuelle Modelle (LLMs/VLMs/MLLMs) sind selbst in kleineren Größen mittlerweile zu wirklich nützlichen Dingen im Stande. Probiert es hier gerne mal mit einem der neuesten Modelle aus. :)
 
+Wenn du einen wirklich ausführlichen *tech-deep-dive* zu Gemma4 lesen magst, schau mal [hier im Blog von Maarten Grootendorst](https://newsletter.maartengrootendorst.com/p/a-visual-guide-to-gemma-4).
+
 ## Was in diesem Ordner gezeigt wird
 
 - `litert_lm_server.py`: Lokaler OpenAI-kompatibler API-Server auf FastAPI-Basis mit LiteRT-LM-Engine.
