@@ -62,6 +62,9 @@ wsl
 Der Server wird mit folgendem Befehl gestartet:
 
 ```bash
+export HF_HOME="./huggingface-hub"
+export LITERT_MODEL_PATH="./huggingface-hub/hub/models--litert-community--gemma-4-E4B-it-litert-lm/snapshots/<snapshot-id>/gemma-4-E4B-it.litertlm"
+export LITERT_BACKEND="CPU"
 uv run uvicorn litert_lm_server:app --host 0.0.0.0 --port 8000
 ```
 
