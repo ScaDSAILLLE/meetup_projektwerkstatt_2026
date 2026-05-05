@@ -9,7 +9,7 @@ dependencies = [
     "openai",
     "fastapi",
     "uvicorn[standard]",
-    "litert-lm-api-nightly",
+    "litert-lm-api",
     "huggingface-hub",
 ]
 

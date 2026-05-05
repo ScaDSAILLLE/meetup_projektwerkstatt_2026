@@ -2,7 +2,6 @@ import base64
 import json
 import os
 import tempfile
-import threading
 import time
 from pathlib import Path
 from typing import Any
@@ -10,29 +9,16 @@ from typing import Any
 import litert_lm
 from fastapi import FastAPI, HTTPException
 from fastapi.responses import StreamingResponse
-from huggingface_hub import hf_hub_download
 from pydantic import BaseModel
 
 
-PROJECT_ROOT = Path(__file__).resolve().parent
-DEFAULT_MODEL_FILENAME = "gemma-4-E4B-it.litertlm"
-DEFAULT_MODEL_PATH = PROJECT_ROOT / DEFAULT_MODEL_FILENAME
-MODEL_PATH = os.getenv("LITERT_MODEL_PATH", str(DEFAULT_MODEL_PATH))
-HF_REPO_ID = os.getenv(
-    "LITERT_HF_REPO_ID",
-    "litert-community/gemma-4-E4B-it-litert-lm",
-)
-HF_FILENAME = os.getenv("LITERT_HF_FILENAME", DEFAULT_MODEL_FILENAME)
+MODEL_PATH = os.getenv("LITERT_MODEL_PATH", "./gemma-4-E4B-it.litertlm")
 LITERT_BACKEND = os.getenv("LITERT_BACKEND", "CPU").upper()
 LITERT_AUDIO_BACKEND = os.getenv("LITERT_AUDIO_BACKEND", "CPU").upper()
-SESSION_TTL_SECONDS = int(os.getenv("SESSION_TTL_SECONDS", "1800"))
-MAX_ACTIVE_SESSIONS = int(os.getenv("MAX_ACTIVE_SESSIONS", "64"))
 
 app = FastAPI(title="LiteRT-LM OpenAI-compatible local API")
 
 engine = None
-session_lock = threading.Lock()
-sessions: dict[str, dict[str, Any]] = {}
 
 
 class ChatRequest(BaseModel):
@@ -41,7 +27,6 @@ class ChatRequest(BaseModel):
     stream: bool = False
     max_tokens: int | None = None
     temperature: float | None = None
-    session_id: str | None = None
 
 
 def pick_backend(name: str):
@@ -54,45 +39,6 @@ def pick_backend(name: str):
 
 def model_name() -> str:
     return Path(MODEL_PATH).stem
-
-
-def ensure_model_present() -> Path:
-    model_path = Path(MODEL_PATH).expanduser().resolve()
-
-    if model_path.exists():
-        return model_path
-
-    hf_home = os.getenv("HF_HOME")
-    if not hf_home:
-        hf_home = str((PROJECT_ROOT / ".hf_home").resolve())
-        os.environ["HF_HOME"] = hf_home
-
-    Path(hf_home).mkdir(parents=True, exist_ok=True)
-    model_path.parent.mkdir(parents=True, exist_ok=True)
-
-    print(f"Model file not found at: {model_path}")
-    print(
-        "Downloading from Hugging Face Hub "
-        f"({HF_REPO_ID}/{HF_FILENAME}) with HF_HOME={hf_home}"
-    )
-
-    downloaded_file = hf_hub_download(
-        repo_id=HF_REPO_ID,
-        filename=HF_FILENAME,
-        local_dir=str(model_path.parent),
-        local_dir_use_symlinks=False,
-    )
-
-    downloaded_path = Path(downloaded_file).resolve()
-    target_path = model_path
-
-    if downloaded_path != target_path:
-        if target_path.exists():
-            target_path.unlink()
-        downloaded_path.replace(target_path)
-
-    print(f"Model downloaded to: {target_path}")
-    return target_path
 
 
 def suffix_from_data_url(data_url: str, fallback: str) -> str:
@@ -288,66 +234,6 @@ def cleanup_temp_files(temp_files: list[str]) -> None:
             pass
 
 
-def close_conversation(conversation: Any) -> None:
-    try:
-        if hasattr(conversation, "close"):
-            conversation.close()
-    except Exception:
-        pass
-
-
-def cleanup_expired_sessions() -> None:
-    now = time.time()
-    expired_ids = []
-
-    with session_lock:
-        for session_id, state in sessions.items():
-            if now - state.get("last_access", 0) > SESSION_TTL_SECONDS:
-                expired_ids.append(session_id)
-
-        for session_id in expired_ids:
-            state = sessions.pop(session_id, None)
-            if state and state.get("conversation") is not None:
-                close_conversation(state["conversation"])
-
-
-def get_or_create_session(session_id: str) -> dict[str, Any]:
-    cleanup_expired_sessions()
-    now = time.time()
-
-    with session_lock:
-        state = sessions.get(session_id)
-        if state is None:
-            if len(sessions) >= MAX_ACTIVE_SESSIONS:
-                oldest_id = min(
-                    sessions,
-                    key=lambda sid: sessions[sid].get("last_access", 0),
-                )
-                oldest = sessions.pop(oldest_id)
-                if oldest.get("conversation") is not None:
-                    close_conversation(oldest["conversation"])
-
-            state = {
-                "conversation": engine.create_conversation(),
-                "last_access": now,
-            }
-            sessions[session_id] = state
-
-        state["last_access"] = now
-        return state
-
-
-def reset_session(session_id: str | None) -> None:
-    if not session_id:
-        return
-
-    with session_lock:
-        state = sessions.pop(session_id, None)
-
-    if state and state.get("conversation") is not None:
-        close_conversation(state["conversation"])
-
-
 def make_stream_chunk(
     text: str,
     created: int,
@@ -374,29 +260,35 @@ def make_stream_chunk(
 def startup():
     global engine
 
-    try:
-        resolved_model_path = ensure_model_present()
-    except Exception as e:
+    if not Path(MODEL_PATH).exists():
         raise FileNotFoundError(
-            f"LiteRT-LM model not available at {MODEL_PATH}. "
-            "Tried auto-download via Hugging Face Hub. "
-            "Set HF_HOME/LITERT_MODEL_PATH manually or pre-download the file. "
-            f"Original error: {e}"
-        ) from e
+            f"LiteRT-LM model not found: {MODEL_PATH}. "
+            "Set LITERT_MODEL_PATH or place the .litertlm file there."
+        )
 
     litert_lm.set_min_log_severity(litert_lm.LogSeverity.ERROR)
 
     backend = pick_backend(LITERT_BACKEND)
     audio_backend = pick_backend(LITERT_AUDIO_BACKEND)
 
-    engine = litert_lm.Engine(
-        str(resolved_model_path),
-        backend=backend,
-        vision_backend=backend,
-        audio_backend=audio_backend,
-    )
+    try:
+        engine = litert_lm.Engine(
+            MODEL_PATH,
+            backend=backend,
+            vision_backend=backend,
+            audio_backend=audio_backend,
+        )
+    except RuntimeError as e:
+        if "Vision Encoder model must have exactly one signature" in str(e):
+            print("Vision backend failed; falling back to text/audio-less mode: {e}")
+            engine = litert_lm.Engine(
+                MODEL_PATH,
+                backend=backend,
+            )
+        else:
+            raise
 
-    print(f"LiteRT-LM loaded: {resolved_model_path}")
+    print(f"LiteRT-LM loaded: {MODEL_PATH}")
     print(f"Backend: {LITERT_BACKEND}")
     print(f"Audio backend: {LITERT_AUDIO_BACKEND}")
 
@@ -408,12 +300,6 @@ def shutdown():
     if engine is not None:
         engine.close()
         engine = None
-
-    with session_lock:
-        for state in sessions.values():
-            if state.get("conversation") is not None:
-                close_conversation(state["conversation"])
-        sessions.clear()
 
 
 @app.get("/health")
@@ -475,53 +361,52 @@ def chat_completions(req: ChatRequest):
 
     created = int(time.time())
     request_model_name = req.model or model_name()
-    session_id = (req.session_id or "").strip() or None
 
     if req.stream:
         def event_stream():
             try:
-                if session_id:
-                    state = get_or_create_session(session_id)
-                    conversation = state["conversation"]
-                    last_message = litert_messages[-1]
-                else:
-                    conversation = engine.create_conversation()
+                with engine.create_conversation() as conversation:
+                    # Replay history synchronously.
+                    # This should be text-only history from the frontend.
                     for history_message in litert_messages[:-1]:
                         conversation.send_message(history_message)
+
+                    # Stream only the newest user turn.
                     last_message = litert_messages[-1]
 
-                if hasattr(conversation, "send_message_async"):
-                    response_stream = conversation.send_message_async(last_message)
+                    if hasattr(conversation, "send_message_async"):
+                        response_stream = conversation.send_message_async(last_message)
 
-                    for chunk in response_stream:
-                        text_piece = extract_text(chunk)
+                        for chunk in response_stream:
+                            text_piece = extract_text(chunk)
 
-                        if text_piece:
-                            payload = {
-                                "id": f"chatcmpl-litert-{created}",
-                                "object": "chat.completion.chunk",
-                                "created": created,
-                                "model": request_model_name,
-                                "choices": [
-                                    {
-                                        "index": 0,
-                                        "delta": {"content": text_piece},
-                                        "finish_reason": None,
-                                    }
-                                ],
-                            }
+                            if text_piece:
+                                payload = {
+                                    "id": f"chatcmpl-litert-{created}",
+                                    "object": "chat.completion.chunk",
+                                    "created": created,
+                                    "model": request_model_name,
+                                    "choices": [
+                                        {
+                                            "index": 0,
+                                            "delta": {"content": text_piece},
+                                            "finish_reason": None,
+                                        }
+                                    ],
+                                }
 
-                            yield f"data: {json.dumps(payload)}\n\n"
-                else:
-                    response = conversation.send_message(last_message)
-                    text = extract_text(response)
+                                yield f"data: {json.dumps(payload)}\n\n"
+                    else:
+                        # Fallback for older LiteRT-LM versions.
+                        response = conversation.send_message(last_message)
+                        text = extract_text(response)
 
-                    if text:
-                        yield make_stream_chunk(
-                            text=text,
-                            created=created,
-                            finish_reason=None,
-                        )
+                        if text:
+                            yield make_stream_chunk(
+                                text=text,
+                                created=created,
+                                finish_reason=None,
+                            )
 
                 done_payload = {
                     "id": f"chatcmpl-litert-{created}",
@@ -551,8 +436,6 @@ def chat_completions(req: ChatRequest):
                 yield "data: [DONE]\n\n"
 
             finally:
-                if not session_id and "conversation" in locals():
-                    close_conversation(conversation)
                 cleanup_temp_files(temp_files)
 
         return StreamingResponse(
@@ -561,13 +444,9 @@ def chat_completions(req: ChatRequest):
         )
 
     try:
-        if session_id:
-            state = get_or_create_session(session_id)
-            conversation = state["conversation"]
-            response = conversation.send_message(litert_messages[-1])
-        else:
-            conversation = engine.create_conversation()
+        with engine.create_conversation() as conversation:
             response = None
+
             for message in litert_messages:
                 response = conversation.send_message(message)
 
@@ -597,15 +476,4 @@ def chat_completions(req: ChatRequest):
         ) from e
 
     finally:
-        if not session_id and "conversation" in locals():
-            close_conversation(conversation)
         cleanup_temp_files(temp_files)
-
-
-@app.post("/v1/session/reset")
-def reset_session_endpoint(payload: dict[str, Any]):
-    session_id = str(payload.get("session_id", "")).strip()
-    if not session_id:
-        raise HTTPException(status_code=400, detail="Missing session_id")
-    reset_session(session_id)
-    return {"status": "ok", "session_id": session_id}
