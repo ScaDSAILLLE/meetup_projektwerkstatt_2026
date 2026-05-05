@@ -42,44 +42,71 @@ Viel Spaß beim Bauen deines eigenen lokalen KI-Agenten...
 Hinweis: nutzt hierfür gerne schon Opencode und lasst euch das alles erklären!
 Für Entwickler:innen: fühlt euch frei unter Quellenangabe ein eigenes Setup auf diesem Projekt zu erarbeiten. :)
 
+### 0) Starte einen Terminal in `2_test_gemma4_multimodal` (z.B. *rechtsklick* + *open in integrated terminal*)
+
+Starte WSL (Windows-Subsystem-for-Linux) - alles folgende bitt in `wsl` ausführen oder weitere *Instanzen* starten:
+
+```bash
+wsl
+```
+
 ### 1) Abhängigkeiten installieren
 
 ```bash
 uv sync
 ```
 
-### 2) LiteRT-LM-Server starten
+### 2) Modell manuell vorab laden (optional, empfohlen)
+
+Du kannst das Modell vor dem Serverstart manuell in diesen Ordner laden.
+Dabei wird `HF_HOME` lokal auf `2_test_gemma4_multimodal/.hf_home` gesetzt:
+
+```bash
+HF_HOME="$(pwd)/.hf_home" uv run python -c "from huggingface_hub import hf_hub_download; hf_hub_download(repo_id='litert-community/gemma-4-E4B-it-litert-lm', filename='gemma-4-E4B-it.litertlm', local_dir='.', local_dir_use_symlinks=False)"
+```
+
+Alternativ mit `huggingface-cli`:
+
+```bash
+HF_HOME="$(pwd)/.hf_home" uv run huggingface-cli download litert-community/gemma-4-E4B-it-litert-lm gemma-4-E4B-it.litertlm --local-dir .
+```
+
+### 3) LiteRT-LM-Server starten (denk daran: in einem WSL-Terminal!)
+
+Hinweis: Wenn `gemma-4-E4B-it.litertlm` im Ordner fehlt, prüft der Server das beim Start
+eigenständig und lädt das Modell automatisch über Hugging Face Hub nach (mit lokalem
+`HF_HOME` in `.hf_home`, sofern `HF_HOME` nicht bereits gesetzt ist).
 
 ```bash
 uv run uvicorn litert_lm_server:app --host 0.0.0.0 --port 8000
 ```
 
-### 3) Chat-App starten (neues Terminal)
+### 4) Chat-App starten (weiterer WSL-Terminal)
 
 ```bash
 uv run python app.py
 ```
 
-### 4) Ausprobieren
+### 5) Ausprobieren
 
 - Stelle eine reine Textfrage.
 - Lade ein Bild hoch und lass es analysieren.
 - Lade Audio hoch oder nutze das Mikrofon.
 
-## Aha-Effekt: Lokaler Agent ohne Internet
+## *Aha*-Effekt: Lokaler Agent ohne Internet
 
-Für den Workshop ist das ein starker Moment:
+Teste doch mal *ohne Internetverbindung*
 
 1. Starte Server und App wie oben.
 2. Öffne die Chatoberfläche im Browser.
 3. Schalte auf dem Windows-Workshop-Laptop das WLAN aus.
 4. Stelle erneut Fragen.
 
-Wenn alles korrekt lokal läuft, funktioniert der Agent weiterhin. Genau das macht „lokal“ greifbar.
+Wenn alles korrekt lokal läuft, funktioniert der Agent weiterhin: also vollkommen lokal!
 
 ## Mit OpenCode erklären lassen
 
-Nutze OpenCode direkt als Coach im Projekt:
+Nutze nun OpenCode direkt als *Coach* im Projekt:
 
 - „Erkläre mir `app.py` Schritt für Schritt: Wie werden Bild und Audio in API-Content umgewandelt?“
 - „Zeige mir, wie `litert_lm_server.py` OpenAI-Requests zu LiteRT-LM mapped.“
@@ -95,5 +122,4 @@ So lernst du nicht nur das Was, sondern auch das Warum hinter jeder Komponente.
 - **Prompt-Playbooks**: Wiederverwendbare Rollen und Arbeitsanweisungen für verschiedene Aufgaben.
 - **UI-Verbesserungen**: Eigene Buttons, Modusumschalter, Session-Steuerung, Debug-Ansichten.
 - **Guardrails**: Grenzen, Rechte und Protokollierung klar definieren.
-
 

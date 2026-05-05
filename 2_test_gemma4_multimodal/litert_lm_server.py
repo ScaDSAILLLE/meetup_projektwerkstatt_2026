@@ -10,10 +10,19 @@ from typing import Any
 import litert_lm
 from fastapi import FastAPI, HTTPException
 from fastapi.responses import StreamingResponse
+from huggingface_hub import hf_hub_download
 from pydantic import BaseModel
 
 
-MODEL_PATH = os.getenv("LITERT_MODEL_PATH", "./gemma-4-E2B-it.litertlm")
+PROJECT_ROOT = Path(__file__).resolve().parent
+DEFAULT_MODEL_FILENAME = "gemma-4-E4B-it.litertlm"
+DEFAULT_MODEL_PATH = PROJECT_ROOT / DEFAULT_MODEL_FILENAME
+MODEL_PATH = os.getenv("LITERT_MODEL_PATH", str(DEFAULT_MODEL_PATH))
+HF_REPO_ID = os.getenv(
+    "LITERT_HF_REPO_ID",
+    "litert-community/gemma-4-E4B-it-litert-lm",
+)
+HF_FILENAME = os.getenv("LITERT_HF_FILENAME", DEFAULT_MODEL_FILENAME)
 LITERT_BACKEND = os.getenv("LITERT_BACKEND", "CPU").upper()
 LITERT_AUDIO_BACKEND = os.getenv("LITERT_AUDIO_BACKEND", "CPU").upper()
 SESSION_TTL_SECONDS = int(os.getenv("SESSION_TTL_SECONDS", "1800"))
@@ -45,6 +54,45 @@ def pick_backend(name: str):
 
 def model_name() -> str:
     return Path(MODEL_PATH).stem
+
+
+def ensure_model_present() -> Path:
+    model_path = Path(MODEL_PATH).expanduser().resolve()
+
+    if model_path.exists():
+        return model_path
+
+    hf_home = os.getenv("HF_HOME")
+    if not hf_home:
+        hf_home = str((PROJECT_ROOT / ".hf_home").resolve())
+        os.environ["HF_HOME"] = hf_home
+
+    Path(hf_home).mkdir(parents=True, exist_ok=True)
+    model_path.parent.mkdir(parents=True, exist_ok=True)
+
+    print(f"Model file not found at: {model_path}")
+    print(
+        "Downloading from Hugging Face Hub "
+        f"({HF_REPO_ID}/{HF_FILENAME}) with HF_HOME={hf_home}"
+    )
+
+    downloaded_file = hf_hub_download(
+        repo_id=HF_REPO_ID,
+        filename=HF_FILENAME,
+        local_dir=str(model_path.parent),
+        local_dir_use_symlinks=False,
+    )
+
+    downloaded_path = Path(downloaded_file).resolve()
+    target_path = model_path
+
+    if downloaded_path != target_path:
+        if target_path.exists():
+            target_path.unlink()
+        downloaded_path.replace(target_path)
+
+    print(f"Model downloaded to: {target_path}")
+    return target_path
 
 
 def suffix_from_data_url(data_url: str, fallback: str) -> str:
@@ -326,11 +374,15 @@ def make_stream_chunk(
 def startup():
     global engine
 
-    if not Path(MODEL_PATH).exists():
+    try:
+        resolved_model_path = ensure_model_present()
+    except Exception as e:
         raise FileNotFoundError(
-            f"LiteRT-LM model not found: {MODEL_PATH}. "
-            "Set LITERT_MODEL_PATH or place the .litertlm file there."
-        )
+            f"LiteRT-LM model not available at {MODEL_PATH}. "
+            "Tried auto-download via Hugging Face Hub. "
+            "Set HF_HOME/LITERT_MODEL_PATH manually or pre-download the file. "
+            f"Original error: {e}"
+        ) from e
 
     litert_lm.set_min_log_severity(litert_lm.LogSeverity.ERROR)
 
@@ -338,13 +390,13 @@ def startup():
     audio_backend = pick_backend(LITERT_AUDIO_BACKEND)
 
     engine = litert_lm.Engine(
-        MODEL_PATH,
+        str(resolved_model_path),
         backend=backend,
         vision_backend=backend,
         audio_backend=audio_backend,
     )
 
-    print(f"LiteRT-LM loaded: {MODEL_PATH}")
+    print(f"LiteRT-LM loaded: {resolved_model_path}")
     print(f"Backend: {LITERT_BACKEND}")
     print(f"Audio backend: {LITERT_AUDIO_BACKEND}")
 
