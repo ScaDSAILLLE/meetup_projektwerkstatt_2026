@@ -53,8 +53,8 @@ Der **Plan-Modus** ist der beste Freund beim Experimentieren:
 1. **`Tab` drücken** → Lower-Right zeigt "Plan mode"
 2. Beschreibe was du willst:
    ```
-   Ich möchte einen einfachen SmolAgents-Agenten bauen, der
-   Workshop-Ideen sammelt und nach Aufwand sortiert. Wie könnte das gehen?
+   Ich möchte ein Programm das per Webcam Handgesten erkennt und
+   damit eine Präsentation steuern kann. Wie könnte das gehen?
    ```
 3. OpenCode zeigt dir einen Plan
 4. Feedback geben:
@@ -72,17 +72,18 @@ Der **Plan-Modus** ist der beste Freund beim Experimentieren:
 ### ✅ Gute Beispiele
 
 ```
-Erkläre mir, wie der Orchestrator in @2_ai-agents_with_smolagents/agents/orchestrator.py funktioniert
+Erkläre mir wie die Face Detection in @3_mediapipe_detection/beispiele/face_detection.py funktioniert
 ```
 
 ```
-Ich möchte die SmolAgents-App um einen Quiz-Agenten erweitern.
-Schau dir den Code an und sag mir, welche Dateien ich minimal ändern muss.
+Ich möchte die Hand-Tracking-App erweitern: Wenn eine Faust
+erkannt wird, soll stattdessen ein anderes Event gefeuert werden.
+Schau dir den Code an und sag mir was ich ändern muss.
 ```
 
 ```
-Wir bauen einen Agenten, der aus einem Thema eine kurze Workshop-Agenda erstellt.
-Erstelle einen Plan für eine minimale Tool-Funktion und die Integration in den Orchestrator.
+Wir bauen eine Gestensteuerung für eine Web-App. Erstelle einen
+Plan für eine Python-Backend-API die Gesten als WebSocket streamt.
 ```
 
 ### ❌ Vermeiden
@@ -136,8 +137,8 @@ Nützlich für:
 
 ### 1. Wähle ein Beispielprojekt
 
-- **SmolAgents-App**: [`2_ai-agents_with_smolagents/`](../2_ai-agents_with_smolagents/)
-- **OpenCode-Prompts**: Nutze die Beispiele in diesem Playbook als Einstieg für Code-Erklärung, Planung und kleine Änderungen.
+- **MediaPipe**: [`3_mediapipe_detection/`](../3_mediapipe_detection/)
+- **VLM Scene**: [`4_qwen_vl_scene/`](../4_qwen_vl_scene/)
 
 ### 2. Starte im Plan-Modus
 
@@ -189,7 +190,6 @@ Kannst du mir erklären was du gemacht hast?
 ### 4. Nutze /share für Teamarbeit
 - Teile deine Session mit Kolleg*innen
 - Kopiert den Link automatisch
-- Geteilte Sessions sind per Link öffentlich erreichbar; keine Secrets oder API-Keys teilen.
 
 ### 5. Nutze UV für Pakete
 - Statt `pip install` → `uv add <paket>`
@@ -206,8 +206,7 @@ Kannst du mir erklären was du gemacht hast?
 | `/undo` | Letzte Änderung rückgängig |
 | `/redo` | Letzte Änderung wiederholen |
 | `/share` | Konversation teilen |
-| `/help` | Hilfe und verfügbare Befehle anzeigen |
-| `/models` | Verfügbare Modelle anzeigen |
+| `/ask` | Eine Frage stellen |
 
 ---
 
@@ -215,8 +214,6 @@ Kannst du mir erklären was du gemacht hast?
 
 ### "OpenCode kann nicht auf Dateien zugreifen"
 → Stelle sicher, dass du im richtigen Verzeichnis bist und `/init` ausgeführt hast
-
-Hinweis für dieses Repo: `AGENTS.md` ist hier bewusst lokal und in `.gitignore` eingetragen. Wenn `/init` die Datei aktualisiert, nicht committen.
 
 ### "API-Key fehlt"
 → Nutze `/connect` oder setze Umgebungsvariablen

@@ -2,11 +2,9 @@
 
 ## Installation
 
-### Windows: WSL für OpenCode empfohlen
+### Windows: WSL empfohlen!
 
-Für die beste Erfahrung mit OpenCode empfiehlt auch die offizielle Doku **WSL (Windows Subsystem for Linux)** auf Windows. Auf den Workshop-Laptops ist WSL vorbereitet: In einem Terminal `wsl` eingeben und ihr seid im Linux-Subsystem.
-
-Wichtig: Diese Empfehlung gilt für OpenCode selbst. Die SmolAgents-App der Projektwerkstatt wird auf den Workshop-Laptops bewusst im normalen Windows-Terminal von VS Code gestartet, damit es keine WSL-Pfad- oder Environment-Missverständnisse gibt.
+Für die beste Erfahrung mit OpenCode empfehlen wir **WSL (Windows Subsystem for Linux)** auf Windows 11. (Ist bereits aktiviert und eingerichtet: einfach in jedwedem Terminal `wsl` eingeben und ihr seid in einem Linux-Subsystem :))
 
 #### WSL installieren (falls nicht vorhanden) & für alle, die das eigens aufsetzen wollen/müssen:
 
@@ -26,7 +24,7 @@ Nach der WSL-Installation:
 # OpenCode installieren
 curl -fsSL https://opencode.ai/install | bash
 
-# Oder alternativ mit npm, falls Node.js bereits installiert ist. curl-Befehl ist aber klar empfohlen!
+# Oder alternativ mit npm 8muss aber sicher auch erst installiert werden also Empfehlung: curl Befehl)
 npm install -g opencode-ai
 ```
 
@@ -45,7 +43,8 @@ brew install anomalyco/tap/opencode
 
 ### Direkt unter Windows (ohne WSL)
 
-Schau vorher bitte hier: https://opencode.ai/docs/ und https://opencode.ai/docs/windows-wsl. Falls WSL nicht genutzt werden soll:
+Schau vorher bitte hier: https://opencode.ai/docs/de \
+Falls WSL nicht genutzt werden soll:
 
 ```powershell
 # Option 1: npm
@@ -120,9 +119,7 @@ setx OPENAI_API_KEY "sk-..."
    /init
    ```
 
-   Dies erstellt oder aktualisiert eine `AGENTS.md`-Datei mit projektspezifischen Anweisungen und schaut schon mal grob den Ordner durch.
-
-   Hinweis für dieses Repo: `AGENTS.md` ist bewusst lokal und in `.gitignore` eingetragen. Bitte nicht committen.
+   Dies erstellt eine `AGENTS.md`-Datei mit projektspezifischen Anweisungen und schaut schon mal grob den Ordner durch.
 
 ---
 
@@ -133,14 +130,6 @@ Prüfen ob alles funktioniert:
 ```bash
 opencode --version
 ```
-
-In VS Code kann OpenCode außerdem direkt im integrierten Terminal gestartet werden:
-
-```bash
-opencode
-```
-
-Die VS-Code-Erweiterung kann sich dabei automatisch installieren. Aktuelle Shortcuts laut OpenCode-Doku: `Ctrl+Esc` öffnet/fokussiert OpenCode, `Ctrl+Shift+Esc` startet eine neue Session.
 
 ---
 

@@ -1,0 +1,41 @@
+import gradio as gr
+
+theme = gr.themes.Default(
+    primary_hue=gr.themes.Color(
+        c50="#e6f2f8",
+        c100="#b3daea",
+        c200="#80c2dc",
+        c300="#4daacd",
+        c400="#1a92bf",
+        c500="#0074ac",
+        c600="#005d8a",
+        c700="#004668",
+        c800="#002f46",
+        c900="#001824",
+        c950="#000c12",
+    ),
+    secondary_hue=gr.themes.Color(
+        c50="#f0f8ec",
+        c100="#d4eac4",
+        c200="#b8dc9c",
+        c300="#9cce74",
+        c400="#80c04c",
+        c500="#71BD56",
+        c600="#5a9745",
+        c700="#437134",
+        c800="#2c4b23",
+        c900="#152612",
+        c950="#0a1309",
+    ),
+).set(
+    button_primary_background_fill="linear-gradient(90deg, *primary_500 0%, *secondary_500 100%)",
+    button_primary_background_fill_hover="linear-gradient(90deg, *primary_600 0%, *secondary_600 100%)",
+    button_primary_text_color="white",
+    button_primary_border_color="*primary_500",
+    button_secondary_background_fill="*primary_700",
+    button_secondary_background_fill_hover="*primary_800",
+    button_secondary_text_color="white",
+    button_secondary_border_color="*primary_700",
+    loader_color="*primary_500",
+    slider_color="*primary_500",
+)

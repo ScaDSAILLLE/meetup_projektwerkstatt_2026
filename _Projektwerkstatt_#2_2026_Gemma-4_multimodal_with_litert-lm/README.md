@@ -1,6 +1,6 @@
-# KI-Projektwerkstatt #3 2026
+# KI-Projektwerkstatt #2 2026
 
-## AI-Agents und Agentensysteme mit SmolAgents
+## OpenCode-Produktivsetups & Bring Your Ideas
 
 Angewandte KI. Hands-on. Offen für alle.
 
@@ -27,21 +27,15 @@ Einmalig teilnehmen oder über das Jahr hinweg kontinuierlich an einem Projekt a
 
 ---
 
-## Heutige Projektwerkstatt am 11.08.2026: AI-Agents und Agentensysteme mit SmolAgents
+## Heutige Projektwerkstatt am 05.05.2026: Opencode Produktiv-Setups mit Input Pitches, lokale KI-Agenten (mulimodal, danke Gemma4 e4b) und Bring-Your-Ideas
 
-Wir starten mit einer kurzen Einführung in AI-Agents, Tool-Nutzung und Multi-Agentensysteme. Danach probiert ihr eine kleine Gradio-App aus, die mit Hugging Face `smolagents` einen Orchestrator-Agenten und spezialisierte Sub-Agenten verbindet.
+Wir beginnen mit kurze Input-Pitches zeigen produktive Arbeitsweisen & Setups mit OpenCode: vom Install bis zu wiederverwendbaren Agent-Workflows im Alltag. Zusätzlich gibt es die Möglichkeit, eine lokale multimodale Gemma-4-Demo auszuprobieren und zu verstehen, wie ein lokaler Agent mit Text, Bild und Audio arbeitet.
 
-Der praktische Einstieg liegt hier im Repo:
+Dann heißt es: **Bring-your-ideas** 
+Bringt eigene Use Cases, findet euch in Teams oder alleine und setzt Mini-Prototypen um!
 
-- [`1_opencode/`](1_opencode/) für OpenCode-Setup, Prompt-Playbook und produktive Agentic-Coding-Workflows.
-- [`2_ai-agents_with_smolagents/`](2_ai-agents_with_smolagents/) für die SmolAgents-App, das Tutorial und die Aufgaben der heutigen Projektwerkstatt.
-
-Auf den Workshop-Laptops ist das Setup inklusive API-Zugang bereits vorbereitet. Wer mit eigenem Gerät arbeitet oder nach dem Meetup weitermachen möchte, findet die Setup-Schritte in den jeweiligen Unterordnern.
-
-Dann heißt es: **bauen, testen, erweitern**
-Ihr könnt den Orchestrator ausprobieren, einzelne Agenten direkt testen, einen eigenen Agenten ergänzen oder eure eigenen Use Cases mitbringen.
-
-Die früheren Projektwerkstätten liegen als Archiv in den `_Projektwerkstatt_*`-Ordnern. Für die heutige Session arbeitet ihr am besten im Root und in `2_ai-agents_with_smolagents/`.
+Es stehen vorbereitete Repos für Setup und Startprojekte sowie weiterführende Ressourcen bereit hier im Repo.
+Fokus liegt auf Ideenfindung, Prototyping & Austausch.
 
 ---
 
@@ -51,9 +45,9 @@ Die früheren Projektwerkstätten liegen als Archiv in den `_Projektwerkstatt_*`
 |------|----------|
 | 15:45 | Doors Open & Ankommen |
 | 16:00 | Begrüßung & Vorstellung ScaDS.AI Dresden/Leipzig |
-| 16:10 | Input: AI-Agents, Tools und Multi-Agentensysteme |
-| 16:30 | SmolAgents-App starten, Orientierung im Repo |
-| 16:35–18:15 | Projektphase: Agenten testen, bauen und erweitern |
+| 16:10 | Input Pitches & Demos: OpenCode-Produktivsetups |
+| 16:30 | Setup & Ressourcen |
+| 16:35–18:15 | Projektphase / Werkstatt |
 | 18:15–18:30 | Kurzpräsentationen & Austausch (freiwillig) |
 | 18:30–19:00 | OpenLab und Networking |
 
@@ -66,16 +60,15 @@ Die früheren Projektwerkstätten liegen als Archiv in den `_Projektwerkstatt_*`
 - **OpenCode** – AI-Coding-Agent für Terminal/IDE
   - Siehe [`1_opencode/`](1_opencode/)
 
-- **SmolAgents Multi-Agenten-App** – Gradio + Hugging Face `smolagents`
-  - Siehe [`2_ai-agents_with_smolagents/`](2_ai-agents_with_smolagents/)
+- **Lokale multimodale Gemma-4-Demo** – LiteRT-LM + Gradio
+  - Siehe [`2_test_gemma4_multimodal/`](2_test_gemma4_multimodal/)
   
 ### Arbeitsoptionen in der Werkstatt
 
-- **SmolAgents-App ausprobieren** – Orchestrator und einzelne Agenten testen
-- **Eigenen Agenten bauen** – Geführter Einstieg über [`2_ai-agents_with_smolagents/tutorial.md`](2_ai-agents_with_smolagents/tutorial.md)
 - **Bring your idea** – Eigene Idee, bestehender Workflow oder konkreter Use Case
 - **Workshop-Laptops nutzen** – Vorbereitete Setups mit APIs und Tokens direkt verwenden
 - **Eigenes Setup aufbauen** – Mit [`1_opencode/`](1_opencode/) selbst produktiv einrichten
+- **Gemma 4 lokal testen** – Mit [`2_test_gemma4_multimodal/`](2_test_gemma4_multimodal/) lokalen Agent ausprobieren
 
 ---
 
