@@ -51,9 +51,9 @@ Die früheren Projektwerkstätten liegen als Archiv in den `_Projektwerkstatt_*`
 |------|----------|
 | 15:45 | Doors Open & Ankommen |
 | 16:00 | Begrüßung & Vorstellung ScaDS.AI Dresden/Leipzig |
-| 16:10 | Input: AI-Agents, Tools und Multi-Agentensysteme |
-| 16:30 | SmolAgents-App starten, Orientierung im Repo |
-| 16:35–18:15 | Projektphase: Agenten testen, bauen und erweitern |
+| 16:10 | Vorstellungsrunde und Projektpitches |
+| 16:40 | Setup, Ressourcen & Orientierung im Repo |
+| 16:45–18:15 | Projektphase: Projekte umsetzen, Agenten testen, bauen und erweitern |
 | 18:15–18:30 | Kurzpräsentationen & Austausch (freiwillig) |
 | 18:30–19:00 | OpenLab und Networking |
 
