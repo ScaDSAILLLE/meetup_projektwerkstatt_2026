@@ -608,7 +608,7 @@ def render_flyer_text(image_path: str, flyer_text_json: str) -> str:
     )
     _draw_centered_text(
         draw,
-        text_data["subtitle"],
+        textwrap.fill(text_data["subtitle"], width=55),
         subtitle_font,
         width,
         y_start=top_band_h // 2,
