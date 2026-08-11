@@ -92,7 +92,7 @@ OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 # Stronger model used by the orchestrator for routing and meta-questions.
 SCADSAI_ORCHESTRATOR_MODEL: str = _env_str(
     "SCADSAI_ORCHESTRATOR_MODEL",
-    "google/gemma-4-26B-A4B-it",
+    "google/gemma-4-31B-it",
 )
 
 
