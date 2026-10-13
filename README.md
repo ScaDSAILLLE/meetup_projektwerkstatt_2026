@@ -1,6 +1,6 @@
-# KI-Projektwerkstatt #3 2026
+# KI-Projektwerkstatt #4 2026
 
-## AI-Agents und Agentensysteme mit SmolAgents
+## LLM-Wikis mit OpenCode und Obsidian
 
 Angewandte KI. Hands-on. Offen für alle.
 
