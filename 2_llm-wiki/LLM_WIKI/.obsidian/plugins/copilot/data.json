@@ -1,0 +1,3203 @@
+{
+  "userId": "e0f8f26e-d03f-4feb-9780-cd7dd8048bd6",
+  "isPaidUser": false,
+  "isPlusUser": false,
+  "entitlementToken": "",
+  "entitlementExpiresAt": 0,
+  "plusLicenseKey": "",
+  "openAIApiKey": "",
+  "openAIOrgId": "",
+  "huggingfaceApiKey": "",
+  "cohereApiKey": "",
+  "anthropicApiKey": "",
+  "googleApiKey": "",
+  "openRouterAiApiKey": "",
+  "xaiApiKey": "",
+  "mistralApiKey": "",
+  "deepseekApiKey": "",
+  "siliconflowApiKey": "",
+  "defaultChainType": "llm_chain",
+  "defaultModelKey": "google/gemini-2.5-flash|openrouterai",
+  "contextTurns": 15,
+  "userSystemPrompt": "",
+  "openAIProxyBaseUrl": "",
+  "stream": true,
+  "copilotFolder": "copilot",
+  "copilotRootHistory": [
+    "copilot"
+  ],
+  "upgradedToV8FromLegacy": false,
+  "defaultSaveFolder": "copilot/copilot-conversations",
+  "defaultConversationTag": "copilot-conversation",
+  "autosaveChat": true,
+  "autoAddActiveContentToContext": true,
+  "defaultOpenArea": "view",
+  "defaultSendShortcut": "enter",
+  "customPromptsFolder": "copilot/copilot-custom-prompts",
+  "qaExclusions": "copilot",
+  "qaInclusions": "",
+  "chatNoteContextPath": "",
+  "chatNoteContextTags": [],
+  "debug": false,
+  "maxSourceChunks": 30,
+  "enableInlineCitations": true,
+  "groqApiKey": "",
+  "activeModels": [
+    {
+      "name": "copilot-plus-flash",
+      "provider": "copilot-plus",
+      "enabled": true,
+      "isBuiltIn": true,
+      "core": true,
+      "plusExclusive": true,
+      "capabilities": [
+        "vision"
+      ],
+      "apiKey": ""
+    },
+    {
+      "name": "google/gemini-2.5-flash",
+      "provider": "openrouterai",
+      "enabled": true,
+      "isBuiltIn": true,
+      "core": true,
+      "capabilities": [
+        "vision"
+      ],
+      "apiKey": ""
+    },
+    {
+      "name": "gpt-5.5",
+      "provider": "openai",
+      "enabled": true,
+      "isBuiltIn": true,
+      "core": true,
+      "capabilities": [
+        "vision"
+      ],
+      "apiKey": ""
+    },
+    {
+      "name": "gpt-5.4-mini",
+      "provider": "openai",
+      "enabled": true,
+      "isBuiltIn": true,
+      "core": true,
+      "capabilities": [
+        "vision"
+      ],
+      "apiKey": ""
+    },
+    {
+      "name": "google/gemini-3.5-flash",
+      "provider": "openrouterai",
+      "enabled": true,
+      "isBuiltIn": true,
+      "capabilities": [
+        "vision",
+        "reasoning"
+      ],
+      "apiKey": ""
+    },
+    {
+      "name": "claude-sonnet-4-6",
+      "provider": "anthropic",
+      "enabled": true,
+      "isBuiltIn": true,
+      "capabilities": [
+        "vision",
+        "reasoning"
+      ],
+      "apiKey": ""
+    },
+    {
+      "name": "gemini-3.5-flash",
+      "provider": "google",
+      "enabled": true,
+      "isBuiltIn": true,
+      "capabilities": [
+        "vision",
+        "reasoning"
+      ],
+      "apiKey": ""
+    },
+    {
+      "name": "gemini-3.1-flash-lite",
+      "provider": "google",
+      "enabled": true,
+      "isBuiltIn": true,
+      "capabilities": [
+        "vision"
+      ],
+      "apiKey": ""
+    },
+    {
+      "name": "gemini-2.5-flash",
+      "provider": "google",
+      "enabled": true,
+      "isBuiltIn": true,
+      "capabilities": [
+        "vision"
+      ],
+      "apiKey": ""
+    },
+    {
+      "name": "google/gemini-3.1-pro-preview",
+      "provider": "openrouterai",
+      "enabled": true,
+      "isBuiltIn": true,
+      "capabilities": [
+        "vision",
+        "reasoning"
+      ],
+      "apiKey": ""
+    },
+    {
+      "name": "google/gemini-2.5-pro",
+      "provider": "openrouterai",
+      "enabled": true,
+      "isBuiltIn": true,
+      "core": false,
+      "capabilities": [
+        "vision"
+      ],
+      "apiKey": ""
+    },
+    {
+      "name": "openai/gpt-5.5",
+      "provider": "openrouterai",
+      "enabled": true,
+      "isBuiltIn": true,
+      "core": false,
+      "capabilities": [
+        "vision"
+      ],
+      "apiKey": ""
+    },
+    {
+      "name": "openai/gpt-5.4-mini",
+      "provider": "openrouterai",
+      "enabled": true,
+      "isBuiltIn": true,
+      "core": false,
+      "capabilities": [
+        "vision"
+      ],
+      "apiKey": ""
+    },
+    {
+      "name": "grok-4.3",
+      "provider": "xai",
+      "enabled": true,
+      "isBuiltIn": true,
+      "core": false,
+      "capabilities": [
+        "vision"
+      ],
+      "apiKey": ""
+    },
+    {
+      "name": "x-ai/grok-4.3",
+      "provider": "openrouterai",
+      "enabled": true,
+      "isBuiltIn": true,
+      "core": false,
+      "capabilities": [
+        "vision"
+      ],
+      "apiKey": ""
+    },
+    {
+      "name": "gpt-4.1",
+      "provider": "openai",
+      "enabled": true,
+      "isBuiltIn": true,
+      "core": false,
+      "capabilities": [
+        "vision"
+      ],
+      "apiKey": ""
+    },
+    {
+      "name": "gpt-4.1-mini",
+      "provider": "openai",
+      "enabled": true,
+      "isBuiltIn": true,
+      "core": false,
+      "capabilities": [
+        "vision"
+      ],
+      "apiKey": ""
+    },
+    {
+      "name": "claude-opus-4-7",
+      "provider": "anthropic",
+      "enabled": true,
+      "isBuiltIn": true,
+      "capabilities": [
+        "vision",
+        "reasoning"
+      ],
+      "apiKey": ""
+    },
+    {
+      "name": "claude-haiku-4-5",
+      "provider": "anthropic",
+      "enabled": true,
+      "isBuiltIn": true,
+      "capabilities": [
+        "vision",
+        "reasoning"
+      ],
+      "apiKey": ""
+    },
+    {
+      "name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "enabled": true,
+      "isBuiltIn": true,
+      "capabilities": [
+        "vision",
+        "reasoning"
+      ],
+      "apiKey": ""
+    },
+    {
+      "name": "gemini-2.5-pro",
+      "provider": "google",
+      "enabled": true,
+      "isBuiltIn": true,
+      "capabilities": [
+        "vision"
+      ],
+      "apiKey": ""
+    },
+    {
+      "name": "deepseek-chat",
+      "provider": "deepseek",
+      "enabled": true,
+      "isBuiltIn": true,
+      "apiKey": ""
+    },
+    {
+      "name": "deepseek-reasoner",
+      "provider": "deepseek",
+      "enabled": true,
+      "isBuiltIn": true,
+      "capabilities": [
+        "reasoning"
+      ],
+      "apiKey": ""
+    },
+    {
+      "name": "deepseek-ai/DeepSeek-V3",
+      "provider": "siliconflow",
+      "enabled": true,
+      "isBuiltIn": false,
+      "baseUrl": "https://api.siliconflow.com/v1",
+      "apiKey": ""
+    },
+    {
+      "name": "deepseek-ai/DeepSeek-R1",
+      "provider": "siliconflow",
+      "enabled": true,
+      "isBuiltIn": false,
+      "baseUrl": "https://api.siliconflow.com/v1",
+      "capabilities": [
+        "reasoning"
+      ],
+      "apiKey": ""
+    }
+  ],
+  "lexicalSearchRamLimit": 100,
+  "promptUsageTimestamps": {},
+  "promptSortStrategy": "timestamp",
+  "chatHistorySortStrategy": "recent",
+  "projectsFolder": "copilot/projects",
+  "defaultConversationNoteName": "{$topic}@{$date}_{$time}",
+  "inlineEditCommands": [],
+  "projectList": [],
+  "lastDismissedVersion": "4.0.14",
+  "lastShownStartupVersion": "4.0.14",
+  "passMarkdownImages": true,
+  "enableAutonomousAgent": true,
+  "enableCustomPromptTemplating": true,
+  "enableSelfHostMode": false,
+  "enableMiyo": false,
+  "enableMiyoSearchSkill": false,
+  "miyoSearchAll": false,
+  "relevantNotesLiveUpdate": true,
+  "miyoServerUrl": "",
+  "selfHostSearchProvider": "firecrawl",
+  "firecrawlApiKey": "",
+  "perplexityApiKey": "",
+  "parallelApiKey": "",
+  "exaApiKey": "",
+  "supadataApiKey": "",
+  "docProcessorBackend": "plus",
+  "enableLexicalBoosts": true,
+  "suggestedDefaultCommands": false,
+  "autonomousAgentEnabledToolIds": [
+    "localSearch",
+    "readNote",
+    "webSearch",
+    "pomodoro",
+    "youtubeTranscription",
+    "writeFile",
+    "editFile",
+    "updateMemory"
+  ],
+  "reasoningEffort": "low",
+  "verbosity": "medium",
+  "memoryFolderName": "copilot/memory",
+  "enableRecentConversations": true,
+  "maxRecentConversations": 30,
+  "enableSavedMemory": true,
+  "quickCommandIncludeNoteContext": true,
+  "autoAcceptEdits": false,
+  "diffViewMode": "split",
+  "userSystemPromptsFolder": "copilot/system-prompts",
+  "defaultSystemPromptTitle": "",
+  "autoCompactThreshold": 128000,
+  "convertedDocOutputFolder": "",
+  "agentMode": {
+    "byok": {},
+    "activeBackend": "opencode",
+    "backends": {
+      "opencode": {
+        "defaultModel": {
+          "baseModelId": "a4bb7605-fb20-474b-b800-e70a05d8ce89/google/gemma-4-26B-A4B-it",
+          "effort": null
+        }
+      }
+    },
+    "debugFullFrames": true,
+    "notificationSound": true,
+    "notificationSoundId": "piano",
+    "welcomeDismissed": true,
+    "skills": {
+      "folder": "copilot/skills"
+    },
+    "deviceProfiles": {
+      "3e63dba6-b2b0-4af0-a7a1-326b2f03fa3e": {
+        "opencode": {
+          "binaryPath": "C:\\Users\\goetze\\.obsidian-copilot\\opencode\\2.0.3\\bin\\opencode.exe",
+          "binaryVersion": "2.0.3",
+          "binarySource": "managed",
+          "probeSessionId": "ses_ee503b35fffeZDxFUrGTQ6APEa"
+        }
+      },
+      "6dfd6ec0-d9f5-4baf-8fc9-4fb91e104ce0": {
+        "opencode": {
+          "binaryPath": "C:\\Users\\scadsai\\.obsidian-copilot\\opencode\\2.0.3\\bin\\opencode.exe",
+          "binaryVersion": "2.0.3",
+          "binarySource": "managed",
+          "probeSessionId": "ses_ecb7d1dc4ffeAXzaqudhKvQEls"
+        }
+      },
+      "4d3504b6-47c4-4fbe-9a78-240f101fbdb9": {
+        "opencode": {
+          "binaryPath": "C:\\Users\\Christin Pfütze\\.obsidian-copilot\\opencode\\2.0.3\\bin\\opencode.exe",
+          "binaryVersion": "2.0.3",
+          "binarySource": "managed",
+          "probeSessionId": "ses_ecb0d78b0fferix5PqOuMvdj0c"
+        }
+      }
+    }
+  },
+  "providers": {
+    "37c0dc04-a95d-4255-921b-7df0a174c616": {
+      "providerType": "openai-compatible",
+      "displayName": "opencode",
+      "origin": {
+        "kind": "agent",
+        "agentType": "opencode"
+      },
+      "requiresApiKey": false,
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "addedAt": 1790773810532,
+      "apiKeyKeychainId": null
+    },
+    "a4bb7605-fb20-474b-b800-e70a05d8ce89": {
+      "providerType": "openai-compatible",
+      "displayName": "llm-scads",
+      "baseUrl": "https://llm.scads.ai/v1",
+      "enableCors": false,
+      "requiresApiKey": false,
+      "origin": {
+        "kind": "byok"
+      },
+      "providerId": "a4bb7605-fb20-474b-b800-e70a05d8ce89",
+      "addedAt": 1790773949683,
+      "apiKeyKeychainId": "copilot-vaca0e6af-provider-a4bb7605-fb20-474b-b800-e70a05d8ce89"
+    },
+    "303180f8-7eeb-4f0c-9086-35b71928a46e": {
+      "providerType": "anthropic",
+      "displayName": "Claude",
+      "origin": {
+        "kind": "agent",
+        "agentType": "claude"
+      },
+      "requiresApiKey": false,
+      "providerId": "303180f8-7eeb-4f0c-9086-35b71928a46e",
+      "addedAt": 1790842458230,
+      "apiKeyKeychainId": null
+    }
+  },
+  "configuredModels": [
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "opencode/big-pickle",
+        "displayName": "opencode/Big Pickle"
+      },
+      "configuredModelId": "8c83d36d-a8e7-46a3-8ddd-37d551962187",
+      "configuredAt": 1790773810561
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "opencode/ling-3.0-flash-fin-free",
+        "displayName": "opencode/Ling 3.0 Flash Fin Free"
+      },
+      "configuredModelId": "d3bb4824-389c-418f-aa66-0ecb6e9d55d7",
+      "configuredAt": 1790773810561
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "opencode/longcat-2.5-preview-free",
+        "displayName": "opencode/LongCat 2.5 Preview Free"
+      },
+      "configuredModelId": "5555fbd0-7ef3-46c3-8a4a-6645261469df",
+      "configuredAt": 1790773810561
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "opencode/mimo-v2.6-flash-free",
+        "displayName": "opencode/MiMo-V2.6-Flash Free"
+      },
+      "configuredModelId": "00187533-5b81-4ea6-a933-e0dd5ae01916",
+      "configuredAt": 1790773810562
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "opencode/muse-spark-1.3-contributor-free",
+        "displayName": "opencode/Muse Spark 1.3 Free"
+      },
+      "configuredModelId": "ed3e530a-0bce-4f87-ac6c-0bb46c474748",
+      "configuredAt": 1790773810562
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "opencode/nemotron-3-ultra-free",
+        "displayName": "opencode/Nemotron 3 Ultra Free"
+      },
+      "configuredModelId": "bfc5432c-19ff-4495-8111-e8dde53597a9",
+      "configuredAt": 1790773810562
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "opencode/nemotron-3.5-lightning-free",
+        "displayName": "opencode/Nemotron 3.5 Lightning Free"
+      },
+      "configuredModelId": "6727c0d7-bc57-4490-9d0c-df08313a7e00",
+      "configuredAt": 1790773810562
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "opencode/space-bunny-free",
+        "displayName": "opencode/Space Bunny Free"
+      },
+      "configuredModelId": "e3cfded6-bdcc-407c-8f22-9639e9a52107",
+      "configuredAt": 1790773810562
+    },
+    {
+      "providerId": "303180f8-7eeb-4f0c-9086-35b71928a46e",
+      "info": {
+        "id": "default",
+        "displayName": "Default (recommended)",
+        "description": "Opus 5.5 · Best for everyday, complex tasks"
+      },
+      "configuredModelId": "585fef06-1e83-4407-a5f3-2db66cab9a74",
+      "configuredAt": 1790842458503
+    },
+    {
+      "providerId": "303180f8-7eeb-4f0c-9086-35b71928a46e",
+      "info": {
+        "id": "opus",
+        "displayName": "Opus 5.5",
+        "description": "For complex work and everyday tasks"
+      },
+      "configuredModelId": "32bae49e-9a7d-4b56-9d8d-0f69c36001a0",
+      "configuredAt": 1790842458505
+    },
+    {
+      "providerId": "303180f8-7eeb-4f0c-9086-35b71928a46e",
+      "info": {
+        "id": "sonnet",
+        "displayName": "Sonnet 5.5",
+        "description": "Most efficient for simpler tasks"
+      },
+      "configuredModelId": "f6d3dbb2-6094-4d84-9cdc-eb6732b73eec",
+      "configuredAt": 1790842458505
+    },
+    {
+      "providerId": "303180f8-7eeb-4f0c-9086-35b71928a46e",
+      "info": {
+        "id": "haiku",
+        "displayName": "Haiku 5.5",
+        "description": "Fastest for quick answers"
+      },
+      "configuredModelId": "b5e1bec7-1e51-4f3b-aba4-791484e2c424",
+      "configuredAt": 1790842458506
+    },
+    {
+      "providerId": "303180f8-7eeb-4f0c-9086-35b71928a46e",
+      "info": {
+        "id": "claude-sonnet-5",
+        "displayName": "Sonnet 5",
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 1000000,
+          "output": 128000
+        },
+        "reasoning": true,
+        "toolCall": true,
+        "releaseDate": "2026-06-29",
+        "cost": {
+          "input": 2,
+          "output": 10,
+          "cacheRead": 0.2,
+          "cacheWrite": 2.5
+        },
+        "description": "Efficient for routine tasks"
+      },
+      "configuredModelId": "f7427df5-ba31-4944-a75e-603e3ce7609c",
+      "configuredAt": 1790842458506
+    },
+    {
+      "providerId": "303180f8-7eeb-4f0c-9086-35b71928a46e",
+      "info": {
+        "id": "claude-opus-5",
+        "displayName": "Opus 5",
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 1000000,
+          "output": 128000
+        },
+        "reasoning": true,
+        "toolCall": true,
+        "releaseDate": "2026-07-24",
+        "cost": {
+          "input": 5,
+          "output": 25,
+          "cacheRead": 0.5,
+          "cacheWrite": 6.25
+        },
+        "description": "Best for everyday, complex tasks"
+      },
+      "configuredModelId": "c6558e60-2463-45aa-bc43-1e36c701f1aa",
+      "configuredAt": 1790842458507
+    },
+    {
+      "providerId": "303180f8-7eeb-4f0c-9086-35b71928a46e",
+      "info": {
+        "id": "claude-fable-5",
+        "displayName": "Fable 5",
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 1000000,
+          "output": 128000
+        },
+        "reasoning": true,
+        "toolCall": true,
+        "releaseDate": "2026-06-07",
+        "cost": {
+          "input": 10,
+          "output": 50,
+          "cacheRead": 1,
+          "cacheWrite": 12.5
+        },
+        "description": "Most capable for your hardest and longest-running tasks"
+      },
+      "configuredModelId": "cef4c35f-6ba8-42ab-852f-346f6cf46325",
+      "configuredAt": 1790842458507
+    },
+    {
+      "providerId": "303180f8-7eeb-4f0c-9086-35b71928a46e",
+      "info": {
+        "id": "claude-opus-4-8",
+        "displayName": "Opus 4.8",
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 1000000,
+          "output": 128000
+        },
+        "reasoning": true,
+        "toolCall": true,
+        "releaseDate": "2026-05-28",
+        "cost": {
+          "input": 5,
+          "output": 25,
+          "cacheRead": 0.5,
+          "cacheWrite": 6.25
+        },
+        "description": "Best for everyday, complex tasks"
+      },
+      "configuredModelId": "ff2f19d8-0228-4e83-9a31-9e239ef07332",
+      "configuredAt": 1790842458507
+    },
+    {
+      "providerId": "303180f8-7eeb-4f0c-9086-35b71928a46e",
+      "info": {
+        "id": "claude-opus-4-7",
+        "displayName": "Opus 4.7",
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 1000000,
+          "output": 128000
+        },
+        "reasoning": true,
+        "toolCall": true,
+        "releaseDate": "2026-04-14",
+        "cost": {
+          "input": 5,
+          "output": 25,
+          "cacheRead": 0.5,
+          "cacheWrite": 6.25
+        },
+        "description": "Best for everyday, complex tasks"
+      },
+      "configuredModelId": "6724215c-7917-4f83-992c-1240006e5e9d",
+      "configuredAt": 1790842458508
+    },
+    {
+      "providerId": "303180f8-7eeb-4f0c-9086-35b71928a46e",
+      "info": {
+        "id": "claude-opus-4-6",
+        "displayName": "Opus 4.6",
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 1000000,
+          "output": 128000
+        },
+        "reasoning": true,
+        "toolCall": true,
+        "releaseDate": "2026-02-04",
+        "cost": {
+          "input": 5,
+          "output": 25,
+          "cacheRead": 0.5,
+          "cacheWrite": 6.25
+        },
+        "description": "Best for everyday, complex tasks"
+      },
+      "configuredModelId": "959d7002-d2c4-4779-be46-0123676e33b3",
+      "configuredAt": 1790842458508
+    },
+    {
+      "providerId": "303180f8-7eeb-4f0c-9086-35b71928a46e",
+      "info": {
+        "id": "claude-sonnet-4-6",
+        "displayName": "Sonnet 4.6",
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 1000000,
+          "output": 128000
+        },
+        "reasoning": true,
+        "toolCall": true,
+        "releaseDate": "2026-02-17",
+        "cost": {
+          "input": 3,
+          "output": 15,
+          "cacheRead": 0.3,
+          "cacheWrite": 3.75
+        },
+        "description": "Efficient for routine tasks"
+      },
+      "configuredModelId": "41c37201-fc28-4459-932c-8969fb946ddc",
+      "configuredAt": 1790842458508
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "opencode/exo-free",
+        "displayName": "opencode/Exo Free"
+      },
+      "configuredModelId": "16fd9b4b-1554-49ee-8f45-e7ff6fdae064",
+      "configuredAt": 1791454104808
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "opencode/ling-3.1-flash-free",
+        "displayName": "opencode/Ling 3.1 Flash Free"
+      },
+      "configuredModelId": "a40a1b4f-4563-48b9-932d-70aa8bc122ef",
+      "configuredAt": 1791454104810
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "opencode/step-5-preview-free",
+        "displayName": "opencode/Step 5 Preview Free"
+      },
+      "configuredModelId": "e668f155-42d0-4d17-a67a-a95206d7287b",
+      "configuredAt": 1791808100547
+    },
+    {
+      "providerId": "303180f8-7eeb-4f0c-9086-35b71928a46e",
+      "info": {
+        "id": "fable",
+        "displayName": "Fable 5.1",
+        "description": "For your toughest challenges"
+      },
+      "configuredModelId": "1633b612-f300-4bb1-9d52-5289cd0bb420",
+      "configuredAt": 1791877537209
+    },
+    {
+      "providerId": "303180f8-7eeb-4f0c-9086-35b71928a46e",
+      "info": {
+        "id": "claude-haiku-4-5-20251001",
+        "displayName": "Haiku 4.5",
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 200000,
+          "output": 64000
+        },
+        "reasoning": true,
+        "toolCall": true,
+        "releaseDate": "2025-10-15",
+        "cost": {
+          "input": 1,
+          "output": 5,
+          "cacheRead": 0.1,
+          "cacheWrite": 1.25
+        },
+        "description": "Fastest for quick answers"
+      },
+      "configuredModelId": "cf9596cf-687d-4d50-ab2c-5de47a6cb7c2",
+      "configuredAt": 1791877537211
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "opencode/cat-jam-free",
+        "displayName": "opencode/Cat Jam Free"
+      },
+      "configuredModelId": "56125583-a5b2-49ec-9ad5-eac07929913b",
+      "configuredAt": 1791877538198
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/chatgpt-image-latest",
+        "displayName": "openai/chatgpt-image-latest"
+      },
+      "configuredModelId": "6aca41b9-4497-4234-a216-7b6e7d441b10",
+      "configuredAt": 1791882355703
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-daybreak-blue-latest",
+        "displayName": "openai/Daybreak Blue"
+      },
+      "configuredModelId": "ba019d71-d578-4482-aea7-904851040d4b",
+      "configuredAt": 1791882355703
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-daybreak-red-latest",
+        "displayName": "openai/Daybreak Red"
+      },
+      "configuredModelId": "3011be48-2eb1-44f6-ac21-b98f66a0653d",
+      "configuredAt": 1791882355703
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-4.1",
+        "displayName": "openai/GPT-4.1",
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 1047576,
+          "output": 32768
+        },
+        "reasoning": false,
+        "toolCall": true,
+        "releaseDate": "2025-04-14",
+        "cost": {
+          "input": 2.6,
+          "output": 10.4,
+          "cacheRead": 0.65
+        }
+      },
+      "configuredModelId": "cb18154a-a988-4443-b501-91f7a4e659dc",
+      "configuredAt": 1791882355704
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-4.1-fast",
+        "displayName": "openai/GPT-4.1 Fast",
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 1047576,
+          "output": 32768,
+          "input": 1014808
+        },
+        "reasoning": false,
+        "toolCall": true,
+        "releaseDate": "2025-04-14",
+        "cost": {
+          "input": 3.5,
+          "output": 14,
+          "cacheRead": 0.875
+        }
+      },
+      "configuredModelId": "9fc22454-72b6-4cdd-81a8-819980947574",
+      "configuredAt": 1791882355704
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-4.1-mini",
+        "displayName": "openai/GPT-4.1 mini",
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 1000000,
+          "output": 32768
+        },
+        "reasoning": false,
+        "toolCall": true,
+        "releaseDate": "2025-04-14",
+        "cost": {
+          "input": 0.52,
+          "output": 2.08,
+          "cacheRead": 0.13
+        }
+      },
+      "configuredModelId": "7245528f-f845-4994-a95c-4a7e7f20bd75",
+      "configuredAt": 1791882355704
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-4.1-mini-fast",
+        "displayName": "openai/GPT-4.1 mini Fast",
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 1047576,
+          "output": 32768,
+          "input": 1014808
+        },
+        "reasoning": false,
+        "toolCall": true,
+        "releaseDate": "2025-04-14",
+        "cost": {
+          "input": 0.7,
+          "output": 2.8,
+          "cacheRead": 0.175
+        }
+      },
+      "configuredModelId": "774e5e86-0afa-416d-99ae-1623cc29edf6",
+      "configuredAt": 1791882355704
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-4o",
+        "displayName": "openai/GPT-4o",
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 128000,
+          "output": 16384
+        },
+        "reasoning": false,
+        "toolCall": true,
+        "releaseDate": "2024-05-13",
+        "cost": {
+          "input": 3.25,
+          "output": 13,
+          "cacheRead": 1.625
+        }
+      },
+      "configuredModelId": "d0ed836a-1e51-47ee-b680-0a34e0382d0d",
+      "configuredAt": 1791882355705
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-4o-2024-08-06",
+        "displayName": "openai/GPT-4o (2024-08-06)",
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 128000,
+          "output": 16384
+        },
+        "reasoning": false,
+        "toolCall": true,
+        "releaseDate": "2024-08-06",
+        "cost": {
+          "input": 3.25,
+          "output": 13,
+          "cacheRead": 1.625
+        }
+      },
+      "configuredModelId": "27e27219-4ae1-4326-95ad-439cc0f4844a",
+      "configuredAt": 1791882355705
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-4o-2024-11-20",
+        "displayName": "openai/GPT-4o (2024-11-20)",
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 128000,
+          "output": 16384
+        },
+        "reasoning": false,
+        "toolCall": true,
+        "releaseDate": "2024-11-20",
+        "cost": {
+          "input": 3.25,
+          "output": 13,
+          "cacheRead": 1.625
+        }
+      },
+      "configuredModelId": "1ebed9c9-d66c-483b-8925-f0e26834983e",
+      "configuredAt": 1791882355705
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-4o-fast",
+        "displayName": "openai/GPT-4o Fast",
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 128000,
+          "output": 16384,
+          "input": 111616
+        },
+        "reasoning": false,
+        "toolCall": true,
+        "releaseDate": "2024-05-13",
+        "cost": {
+          "input": 4.25,
+          "output": 17,
+          "cacheRead": 2.125
+        }
+      },
+      "configuredModelId": "cbe46f7d-7f5f-4c2d-a52d-57c3e9625159",
+      "configuredAt": 1791882355705
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-4o-mini",
+        "displayName": "openai/GPT-4o mini",
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 128000,
+          "output": 16384
+        },
+        "reasoning": false,
+        "toolCall": true,
+        "releaseDate": "2024-07-18",
+        "cost": {
+          "input": 0.195,
+          "output": 0.78,
+          "cacheRead": 0.0975
+        }
+      },
+      "configuredModelId": "0bbf4b32-73ed-4d5d-9fd1-e190e565afe9",
+      "configuredAt": 1791882355706
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-4o-mini-fast",
+        "displayName": "openai/GPT-4o mini Fast",
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 128000,
+          "output": 16384,
+          "input": 111616
+        },
+        "reasoning": false,
+        "toolCall": true,
+        "releaseDate": "2024-07-18",
+        "cost": {
+          "input": 0.25,
+          "output": 1,
+          "cacheRead": 0.125
+        }
+      },
+      "configuredModelId": "3be866ed-28ba-4d95-842c-070c3b2eca40",
+      "configuredAt": 1791882355706
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-5",
+        "displayName": "openai/GPT-5",
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 400000,
+          "output": 128000,
+          "input": 272000
+        },
+        "reasoning": true,
+        "toolCall": true,
+        "releaseDate": "2025-08-07",
+        "cost": {
+          "input": 1.891175,
+          "output": 15.1294,
+          "cacheRead": 1.71925
+        }
+      },
+      "configuredModelId": "2f42b0b2-2a53-4965-95a8-fed0039a5d1d",
+      "configuredAt": 1791882355706
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-5-fast",
+        "displayName": "openai/GPT-5 Fast",
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 400000,
+          "output": 128000,
+          "input": 272000
+        },
+        "reasoning": true,
+        "toolCall": true,
+        "releaseDate": "2025-08-07",
+        "cost": {
+          "input": 2.5,
+          "output": 20,
+          "cacheRead": 0.25
+        }
+      },
+      "configuredModelId": "fe4fa8f2-91ca-486e-a571-baa651e1b86d",
+      "configuredAt": 1791882355706
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-5-flex",
+        "displayName": "openai/GPT-5 Flex"
+      },
+      "configuredModelId": "2184c431-fdc6-4d93-a7ba-70b2169b5cc0",
+      "configuredAt": 1791882355707
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-5-mini",
+        "displayName": "openai/GPT-5 Mini",
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 400000,
+          "output": 128000,
+          "input": 272000
+        },
+        "reasoning": true,
+        "toolCall": true,
+        "releaseDate": "2025-08-07",
+        "cost": {
+          "input": 0.378235,
+          "output": 3.02588,
+          "cacheRead": 0.34385
+        }
+      },
+      "configuredModelId": "b063a28f-cf17-43a7-a4e0-6fb34f81ebc7",
+      "configuredAt": 1791882355707
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-5-mini-fast",
+        "displayName": "openai/GPT-5 Mini Fast",
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 400000,
+          "output": 128000,
+          "input": 272000
+        },
+        "reasoning": true,
+        "toolCall": true,
+        "releaseDate": "2025-08-07",
+        "cost": {
+          "input": 0.45,
+          "output": 3.6,
+          "cacheRead": 0.045
+        }
+      },
+      "configuredModelId": "793e3459-ede7-4287-b2b8-c26f83d5e057",
+      "configuredAt": 1791882355708
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-5-mini-flex",
+        "displayName": "openai/GPT-5 Mini Flex"
+      },
+      "configuredModelId": "cc3b8578-16e7-4ba6-a634-b55abf2b79c8",
+      "configuredAt": 1791882355708
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-5-nano",
+        "displayName": "openai/GPT-5 Nano",
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 400000,
+          "output": 128000,
+          "input": 272000
+        },
+        "reasoning": true,
+        "toolCall": true,
+        "releaseDate": "2025-08-07",
+        "cost": {
+          "input": 0.075647,
+          "output": 0.605176,
+          "cacheRead": 0.06877
+        }
+      },
+      "configuredModelId": "e314dcae-697c-4467-b184-c676117dc804",
+      "configuredAt": 1791882355708
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-5-nano-flex",
+        "displayName": "openai/GPT-5 Nano Flex"
+      },
+      "configuredModelId": "dbf59cc0-458d-4e06-b880-4db273160ca6",
+      "configuredAt": 1791882355709
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-5-pro",
+        "displayName": "openai/GPT-5 Pro",
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 400000,
+          "output": 272000,
+          "input": 272000
+        },
+        "reasoning": true,
+        "toolCall": true,
+        "releaseDate": "2025-10-06",
+        "cost": {
+          "input": 20.631,
+          "output": 165.048
+        }
+      },
+      "configuredModelId": "059516c5-ced1-43ce-87ea-fc5df4e035a9",
+      "configuredAt": 1791882355709
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-5.1",
+        "displayName": "openai/GPT-5.1",
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 400000,
+          "output": 128000,
+          "input": 272000
+        },
+        "reasoning": true,
+        "toolCall": true,
+        "releaseDate": "2025-11-13"
+      },
+      "configuredModelId": "27cd66ff-0519-4a13-ad9a-95ac8cbbae52",
+      "configuredAt": 1791882355709
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-5.1-fast",
+        "displayName": "openai/GPT-5.1 Fast"
+      },
+      "configuredModelId": "7504cbf2-4f18-4dac-9188-e5ee707f7c04",
+      "configuredAt": 1791882355709
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-5.1-flex",
+        "displayName": "openai/GPT-5.1 Flex"
+      },
+      "configuredModelId": "8bf28625-d921-4de3-a32e-1411d7675c5e",
+      "configuredAt": 1791882355710
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-5.2",
+        "displayName": "openai/GPT-5.2",
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 400000,
+          "output": 128000,
+          "input": 272000
+        },
+        "reasoning": true,
+        "toolCall": true,
+        "releaseDate": "2025-12-11"
+      },
+      "configuredModelId": "76106a7d-fb7d-44cc-abcb-75efe288cb2c",
+      "configuredAt": 1791882355710
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-5.2-fast",
+        "displayName": "openai/GPT-5.2 Fast",
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 400000,
+          "output": 128000,
+          "input": 272000
+        },
+        "reasoning": true,
+        "toolCall": true,
+        "releaseDate": "2025-12-11",
+        "cost": {
+          "input": 3.5,
+          "output": 28,
+          "cacheRead": 0.35
+        }
+      },
+      "configuredModelId": "293fa8c1-a05f-4fa3-9c9b-5743d9874fca",
+      "configuredAt": 1791882355710
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-5.2-flex",
+        "displayName": "openai/GPT-5.2 Flex"
+      },
+      "configuredModelId": "4d0a6906-210b-4599-86c8-b49581933957",
+      "configuredAt": 1791882355710
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-5.2-pro",
+        "displayName": "openai/GPT-5.2 Pro",
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 400000,
+          "output": 128000,
+          "input": 272000
+        },
+        "reasoning": true,
+        "toolCall": true,
+        "releaseDate": "2025-12-11",
+        "cost": {
+          "input": 28.8834,
+          "output": 231.0672
+        }
+      },
+      "configuredModelId": "f0fe3e2c-b6d3-44fb-bba5-10f9526578e5",
+      "configuredAt": 1791882355710
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-5.3-codex",
+        "displayName": "openai/GPT-5.3 Codex",
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 400000,
+          "output": 128000,
+          "input": 272000
+        },
+        "reasoning": true,
+        "toolCall": true,
+        "releaseDate": "2026-02-05",
+        "cost": {
+          "input": 4.8139,
+          "output": 38.5112,
+          "cacheRead": 0.48139
+        }
+      },
+      "configuredModelId": "d6905550-afef-4ee0-a28a-5365524cff0e",
+      "configuredAt": 1791882355711
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-5.3-codex-fast",
+        "displayName": "openai/GPT-5.3 Codex Fast",
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 400000,
+          "output": 128000,
+          "input": 272000
+        },
+        "reasoning": true,
+        "toolCall": true,
+        "releaseDate": "2026-02-05",
+        "cost": {
+          "input": 3.5,
+          "output": 28,
+          "cacheRead": 0.35
+        }
+      },
+      "configuredModelId": "533c083e-5fc3-447e-8ba4-506f92012c26",
+      "configuredAt": 1791882355711
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-5.3-codex-spark",
+        "displayName": "openai/GPT-5.3 Codex Spark",
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 128000,
+          "output": 16384
+        },
+        "reasoning": true,
+        "toolCall": true,
+        "releaseDate": "2026-03-04",
+        "cost": {
+          "input": 0,
+          "output": 0
+        }
+      },
+      "configuredModelId": "7e998568-7dda-4bec-9b33-c41a0a8f45d9",
+      "configuredAt": 1791882355711
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-5.4",
+        "displayName": "openai/GPT-5.4",
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 1050000,
+          "output": 128000,
+          "input": 922000
+        },
+        "reasoning": true,
+        "toolCall": true,
+        "releaseDate": "2026-03-05"
+      },
+      "configuredModelId": "b99264b6-1195-4e36-b2b4-8fae8f214a2e",
+      "configuredAt": 1791882355712
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-5.4-fast",
+        "displayName": "openai/GPT-5.4 Fast",
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 1050000,
+          "output": 128000,
+          "input": 922000
+        },
+        "reasoning": true,
+        "toolCall": true,
+        "releaseDate": "2026-03-05",
+        "cost": {
+          "input": 5,
+          "output": 30,
+          "cacheRead": 0.5
+        }
+      },
+      "configuredModelId": "a9b0bdbb-b3b2-498c-bd98-549ef4969340",
+      "configuredAt": 1791882355712
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-5.4-mini",
+        "displayName": "openai/GPT-5.4 mini",
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 400000,
+          "output": 128000,
+          "input": 272000
+        },
+        "reasoning": true,
+        "toolCall": true,
+        "releaseDate": "2026-03-17",
+        "cost": {
+          "input": 2.0631,
+          "output": 12.3786,
+          "cacheRead": 0.20631
+        }
+      },
+      "configuredModelId": "49da39d9-63a4-4b89-9dbb-a7b8bd483ef1",
+      "configuredAt": 1791882355712
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-5.4-mini-fast",
+        "displayName": "openai/GPT-5.4 mini Fast",
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 400000,
+          "output": 128000,
+          "input": 272000
+        },
+        "reasoning": true,
+        "toolCall": true,
+        "releaseDate": "2026-03-17",
+        "cost": {
+          "input": 1.5,
+          "output": 9,
+          "cacheRead": 0.15
+        }
+      },
+      "configuredModelId": "ea64187a-7a16-4b1d-baad-795ae2ade137",
+      "configuredAt": 1791882355712
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-5.4-mini-flex",
+        "displayName": "openai/GPT-5.4 mini Flex"
+      },
+      "configuredModelId": "8a188141-f64e-49d3-be4e-44c112fddc4e",
+      "configuredAt": 1791882355713
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-5.4-nano",
+        "displayName": "openai/GPT-5.4 nano",
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 400000,
+          "output": 128000,
+          "input": 272000
+        },
+        "reasoning": true,
+        "toolCall": true,
+        "releaseDate": "2026-03-17",
+        "cost": {
+          "input": 0.27508,
+          "output": 1.71925,
+          "cacheRead": 0.027508
+        }
+      },
+      "configuredModelId": "22509b6b-2d3b-4135-ac97-e29ad7107f2b",
+      "configuredAt": 1791882355713
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-5.4-nano-flex",
+        "displayName": "openai/GPT-5.4 nano Flex"
+      },
+      "configuredModelId": "e1adb50a-40db-4746-ad27-3557a8eef8db",
+      "configuredAt": 1791882355713
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-5.4-pro",
+        "displayName": "openai/GPT-5.4 Pro",
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 1050000,
+          "output": 128000,
+          "input": 922000
+        },
+        "reasoning": true,
+        "toolCall": true,
+        "releaseDate": "2026-03-05",
+        "cost": {
+          "input": 41.262,
+          "output": 247.572
+        }
+      },
+      "configuredModelId": "33d7f99e-d0d3-4a64-8658-a4463f29d0b7",
+      "configuredAt": 1791882355714
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-5.5",
+        "displayName": "openai/GPT-5.5",
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 1000000,
+          "output": 128000,
+          "input": 922000
+        },
+        "reasoning": true,
+        "toolCall": true,
+        "releaseDate": "2026-04-23",
+        "cost": {
+          "input": 5,
+          "output": 30
+        }
+      },
+      "configuredModelId": "a7737d78-8ffc-4dc0-9830-5a566f9cddec",
+      "configuredAt": 1791882355714
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-5.5-fast",
+        "displayName": "openai/GPT-5.5 Fast",
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 1000000,
+          "output": 128000,
+          "input": 872000
+        },
+        "reasoning": true,
+        "toolCall": true,
+        "releaseDate": "2026-04-23",
+        "cost": {
+          "input": 12.5,
+          "output": 75,
+          "cacheRead": 1.25
+        }
+      },
+      "configuredModelId": "09578b51-7ca6-4985-826b-7d30b25d7130",
+      "configuredAt": 1791882355714
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-5.5-pro",
+        "displayName": "openai/GPT-5.5 Pro",
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 1050000,
+          "output": 128000,
+          "input": 922000
+        },
+        "reasoning": true,
+        "toolCall": true,
+        "releaseDate": "2026-04-23",
+        "cost": {
+          "input": 41.262,
+          "output": 247.572
+        }
+      },
+      "configuredModelId": "8ef97a3c-cb4c-4efd-91b7-d3bacb311821",
+      "configuredAt": 1791882355715
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-5.6",
+        "displayName": "openai/GPT-5.6"
+      },
+      "configuredModelId": "576ec2b4-37d2-4a87-bc9a-7f985164441d",
+      "configuredAt": 1791882355715
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-5.6-fast",
+        "displayName": "openai/GPT-5.6 Fast"
+      },
+      "configuredModelId": "cdc5db02-cd6b-4e93-aecc-8a9102aa5f7f",
+      "configuredAt": 1791882355715
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-5.6-luna",
+        "displayName": "openai/GPT-5.6 Luna",
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 1050000,
+          "output": 128000,
+          "input": 922000
+        },
+        "reasoning": true,
+        "toolCall": true,
+        "releaseDate": "2026-07-09",
+        "cost": {
+          "input": 0.26,
+          "output": 1.56,
+          "cacheRead": 0.026
+        }
+      },
+      "configuredModelId": "9bf181cc-371f-4d34-b5be-ccaa6cdfa6a4",
+      "configuredAt": 1791882355716
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-5.6-luna-fast",
+        "displayName": "openai/GPT-5.6 Luna Fast",
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 1050000,
+          "output": 128000,
+          "input": 922000
+        },
+        "reasoning": true,
+        "toolCall": true,
+        "releaseDate": "2026-07-09",
+        "cost": {
+          "input": 0.4,
+          "output": 2.4,
+          "cacheRead": 0.04,
+          "cacheWrite": 0.5
+        }
+      },
+      "configuredModelId": "5b33efb0-b653-4004-8c38-b36643f6725e",
+      "configuredAt": 1791882355716
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-5.6-luna-pro",
+        "displayName": "openai/GPT-5.6 Luna Pro",
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 1050000,
+          "output": 128000,
+          "input": 922000
+        },
+        "reasoning": true,
+        "toolCall": true,
+        "releaseDate": "2026-07-09",
+        "cost": {
+          "input": 0.27508,
+          "output": 1.65048,
+          "cacheRead": 0.027508
+        }
+      },
+      "configuredModelId": "84d838da-4d57-4c7b-a6fe-266dca07cb32",
+      "configuredAt": 1791882355716
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-5.6-pro",
+        "displayName": "openai/GPT-5.6 Pro"
+      },
+      "configuredModelId": "d49dd03a-770a-4748-b3a7-58fe01a909ae",
+      "configuredAt": 1791882355717
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-5.6-sol",
+        "displayName": "openai/GPT-5.6 Sol",
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 1050000,
+          "output": 128000,
+          "input": 922000
+        },
+        "reasoning": true,
+        "toolCall": true,
+        "releaseDate": "2026-07-09",
+        "cost": {
+          "input": 5.2,
+          "output": 26,
+          "cacheRead": 0.52
+        }
+      },
+      "configuredModelId": "f4fb243d-e351-4a3d-b55a-a95182b8e3ef",
+      "configuredAt": 1791882355717
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-5.6-sol-fast",
+        "displayName": "openai/GPT-5.6 Sol Fast",
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 1050000,
+          "output": 128000,
+          "input": 922000
+        },
+        "reasoning": true,
+        "toolCall": true,
+        "releaseDate": "2026-07-09",
+        "cost": {
+          "input": 8,
+          "output": 40,
+          "cacheRead": 0.8,
+          "cacheWrite": 10
+        }
+      },
+      "configuredModelId": "4cec4643-cfa4-4eb4-9022-996def75de07",
+      "configuredAt": 1791882355717
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-5.6-sol-pro",
+        "displayName": "openai/GPT-5.6 Sol Pro",
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 1050000,
+          "output": 128000,
+          "input": 922000
+        },
+        "reasoning": true,
+        "toolCall": true,
+        "releaseDate": "2026-07-09",
+        "cost": {
+          "input": 5.5016,
+          "output": 27.508,
+          "cacheRead": 0.55016
+        }
+      },
+      "configuredModelId": "06ca93db-5656-4c52-8c91-c37952f5d581",
+      "configuredAt": 1791882355718
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-5.6-terra",
+        "displayName": "openai/GPT-5.6 Terra",
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 1050000,
+          "output": 128000,
+          "input": 922000
+        },
+        "reasoning": true,
+        "toolCall": true,
+        "releaseDate": "2026-07-09",
+        "cost": {
+          "input": 2.6,
+          "output": 15.6,
+          "cacheRead": 0.26
+        }
+      },
+      "configuredModelId": "cb8eca30-a0c3-4423-ba1c-169bf85757ef",
+      "configuredAt": 1791882355718
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-5.6-terra-fast",
+        "displayName": "openai/GPT-5.6 Terra Fast",
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 1050000,
+          "output": 128000,
+          "input": 922000
+        },
+        "reasoning": true,
+        "toolCall": true,
+        "releaseDate": "2026-07-09",
+        "cost": {
+          "input": 4,
+          "output": 24,
+          "cacheRead": 0.4,
+          "cacheWrite": 5
+        }
+      },
+      "configuredModelId": "756bc859-42ed-416a-831a-29ee5459a463",
+      "configuredAt": 1791882355718
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-5.6-terra-pro",
+        "displayName": "openai/GPT-5.6 Terra Pro",
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 1050000,
+          "output": 128000,
+          "input": 922000
+        },
+        "reasoning": true,
+        "toolCall": true,
+        "releaseDate": "2026-07-09",
+        "cost": {
+          "input": 2.7508,
+          "output": 16.5048,
+          "cacheRead": 0.27508
+        }
+      },
+      "configuredModelId": "a9e627c9-14ba-4d3a-86ec-a5135211d62f",
+      "configuredAt": 1791882355718
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-6-astra",
+        "displayName": "openai/GPT-6 Astra",
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 1050000,
+          "output": 128000,
+          "input": 922000
+        },
+        "reasoning": true,
+        "toolCall": true,
+        "releaseDate": "2026-09-04",
+        "cost": {
+          "input": 13,
+          "output": 65,
+          "cacheRead": 1.3
+        }
+      },
+      "configuredModelId": "eed2fda4-ffae-462d-8fef-3a2bc7c450a5",
+      "configuredAt": 1791882355719
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-6-astra-fast",
+        "displayName": "openai/GPT-6 Astra Fast",
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 1050000,
+          "output": 128000,
+          "input": 922000
+        },
+        "reasoning": true,
+        "toolCall": true,
+        "releaseDate": "2026-09-04",
+        "cost": {
+          "input": 20,
+          "output": 100,
+          "cacheRead": 2,
+          "cacheWrite": 25
+        }
+      },
+      "configuredModelId": "c3f3b96a-d8c7-451a-9037-2b1f19c48f72",
+      "configuredAt": 1791882355719
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-6-astra-pro",
+        "displayName": "openai/GPT-6 Astra Pro",
+        "modalities": {
+          "input": [
+            "pdf",
+            "image",
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 1050000,
+          "output": 128000
+        },
+        "reasoning": true,
+        "toolCall": true,
+        "releaseDate": "2026-09-04",
+        "cost": {
+          "input": 10,
+          "output": 50,
+          "cacheRead": 1,
+          "cacheWrite": 12.5
+        }
+      },
+      "configuredModelId": "74f10700-b1e4-4e8e-8837-2315ddda8437",
+      "configuredAt": 1791882355719
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-6-astra-ultrafast",
+        "displayName": "openai/GPT-6 Astra Ultrafast"
+      },
+      "configuredModelId": "38d2866c-b4a4-4835-817b-0060258dacbb",
+      "configuredAt": 1791882355719
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-6-luna",
+        "displayName": "openai/GPT-6 Luna",
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 1050000,
+          "output": 128000,
+          "input": 922000
+        },
+        "reasoning": true,
+        "toolCall": true,
+        "releaseDate": "2026-09-22",
+        "cost": {
+          "input": 0.13,
+          "output": 0.65,
+          "cacheRead": 0.013
+        }
+      },
+      "configuredModelId": "b48204ea-1d4b-4401-97f1-fba91b3bb964",
+      "configuredAt": 1791882355720
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-6-luna-fast",
+        "displayName": "openai/GPT-6 Luna Fast",
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 1050000,
+          "output": 128000,
+          "input": 922000
+        },
+        "reasoning": true,
+        "toolCall": true,
+        "releaseDate": "2026-09-22",
+        "cost": {
+          "input": 0.2,
+          "output": 1,
+          "cacheRead": 0.02,
+          "cacheWrite": 0.25
+        }
+      },
+      "configuredModelId": "a5261f9d-8b44-477e-aae6-55ad29fe2a15",
+      "configuredAt": 1791882355720
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-6-luna-pro",
+        "displayName": "openai/GPT-6 Luna Pro",
+        "modalities": {
+          "input": [
+            "pdf",
+            "image",
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 1050000,
+          "output": 128000
+        },
+        "reasoning": true,
+        "toolCall": true,
+        "releaseDate": "2026-09-22",
+        "cost": {
+          "input": 0.1,
+          "output": 0.5,
+          "cacheRead": 0.01,
+          "cacheWrite": 0.125
+        }
+      },
+      "configuredModelId": "51c4bd08-070d-4372-a9e8-f175dad357db",
+      "configuredAt": 1791882355720
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-6-sol",
+        "displayName": "openai/GPT-6 Sol",
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 1050000,
+          "output": 128000,
+          "input": 922000
+        },
+        "reasoning": true,
+        "toolCall": true,
+        "releaseDate": "2026-09-22",
+        "cost": {
+          "input": 2.6,
+          "output": 13,
+          "cacheRead": 0.26
+        }
+      },
+      "configuredModelId": "74fef0eb-312e-4658-857a-f69f612802c8",
+      "configuredAt": 1791882355721
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-6-sol-fast",
+        "displayName": "openai/GPT-6 Sol Fast",
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 1050000,
+          "output": 128000,
+          "input": 922000
+        },
+        "reasoning": true,
+        "toolCall": true,
+        "releaseDate": "2026-09-22",
+        "cost": {
+          "input": 4,
+          "output": 20,
+          "cacheRead": 0.4,
+          "cacheWrite": 5
+        }
+      },
+      "configuredModelId": "3fbcad61-ed67-443d-9e81-a5b1258fa54c",
+      "configuredAt": 1791882355721
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-6-sol-pro",
+        "displayName": "openai/GPT-6 Sol Pro",
+        "modalities": {
+          "input": [
+            "pdf",
+            "image",
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 1050000,
+          "output": 128000
+        },
+        "reasoning": true,
+        "toolCall": true,
+        "releaseDate": "2026-09-22",
+        "cost": {
+          "input": 2,
+          "output": 10,
+          "cacheRead": 0.2,
+          "cacheWrite": 2.5
+        }
+      },
+      "configuredModelId": "207d97fe-6aaf-469b-af83-ad26085e1eb8",
+      "configuredAt": 1791882355721
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-6.1-sol",
+        "displayName": "openai/GPT-6.1 Sol",
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 1050000,
+          "output": 128000,
+          "input": 922000
+        },
+        "reasoning": true,
+        "toolCall": true,
+        "releaseDate": "2026-09-29",
+        "cost": {
+          "input": 2.6,
+          "output": 13,
+          "cacheRead": 0.13
+        }
+      },
+      "configuredModelId": "5a7beab4-3136-4e3d-a44c-099ba6cee9cc",
+      "configuredAt": 1791882355721
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-6.1-sol-fast",
+        "displayName": "openai/GPT-6.1 Sol Fast",
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 1050000,
+          "output": 128000,
+          "input": 922000
+        },
+        "reasoning": true,
+        "toolCall": true,
+        "releaseDate": "2026-09-29",
+        "cost": {
+          "input": 4,
+          "output": 20,
+          "cacheRead": 0.2,
+          "cacheWrite": 5
+        }
+      },
+      "configuredModelId": "e47259bf-ae25-45ba-ae7f-0f9b72e945ce",
+      "configuredAt": 1791882355722
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-6.1-sol-pro",
+        "displayName": "openai/GPT-6.1 Sol Pro",
+        "modalities": {
+          "input": [
+            "pdf",
+            "image",
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 1050000,
+          "output": 128000
+        },
+        "reasoning": true,
+        "toolCall": true,
+        "releaseDate": "2026-09-29",
+        "cost": {
+          "input": 2,
+          "output": 10,
+          "cacheRead": 0.1,
+          "cacheWrite": 2.5
+        }
+      },
+      "configuredModelId": "b1f6d101-013d-4d05-a2a8-785e2a003a90",
+      "configuredAt": 1791882355722
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-6.1-sol-ultrafast",
+        "displayName": "openai/GPT-6.1 Sol Ultrafast"
+      },
+      "configuredModelId": "dedda5c1-a827-43b0-b9bb-2ec485c22a8b",
+      "configuredAt": 1791882355722
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-image-1-mini",
+        "displayName": "openai/gpt-image-1-mini",
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "image"
+          ]
+        },
+        "limits": {
+          "context": 0,
+          "output": 0
+        },
+        "reasoning": false,
+        "toolCall": true,
+        "releaseDate": "2025-08-26"
+      },
+      "configuredModelId": "847c6ced-3719-4224-a9f2-3c89f830ad11",
+      "configuredAt": 1791882355722
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-image-1.5",
+        "displayName": "openai/gpt-image-1.5",
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "image"
+          ]
+        },
+        "limits": {
+          "context": 128000,
+          "output": 0
+        },
+        "reasoning": false,
+        "toolCall": false,
+        "releaseDate": "2025-12-16"
+      },
+      "configuredModelId": "2cb1fd35-594f-45fb-bc79-0d2d8064c63f",
+      "configuredAt": 1791882355722
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-image-2",
+        "displayName": "openai/gpt-image-2",
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "image"
+          ]
+        },
+        "limits": {
+          "context": 128000,
+          "output": 0
+        },
+        "reasoning": false,
+        "toolCall": false,
+        "releaseDate": "2026-04-21"
+      },
+      "configuredModelId": "23a50a91-26cd-4993-9f9b-965949a378c6",
+      "configuredAt": 1791882355723
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/gpt-realtime-2.1",
+        "displayName": "openai/GPT-Realtime-2.1",
+        "modalities": {
+          "input": [
+            "text",
+            "audio"
+          ],
+          "output": [
+            "text",
+            "audio"
+          ]
+        },
+        "limits": {
+          "context": 128000,
+          "output": 32000,
+          "input": 96000
+        },
+        "reasoning": true,
+        "toolCall": false,
+        "releaseDate": "2026-07-06",
+        "cost": {
+          "input": 4,
+          "output": 24,
+          "cacheRead": 0.4
+        }
+      },
+      "configuredModelId": "221a3f92-4685-444a-8c0b-82a1ddfe99ad",
+      "configuredAt": 1791882355723
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/o3",
+        "displayName": "openai/o3",
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 200000,
+          "output": 100000
+        },
+        "reasoning": true,
+        "toolCall": true,
+        "releaseDate": "2025-04-16"
+      },
+      "configuredModelId": "797de9ce-edc1-43dd-8db0-38f312258654",
+      "configuredAt": 1791882355724
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/o3-fast",
+        "displayName": "openai/o3 Fast",
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 200000,
+          "output": 100000,
+          "input": 100000
+        },
+        "reasoning": true,
+        "toolCall": true,
+        "releaseDate": "2025-04-16",
+        "cost": {
+          "input": 3.5,
+          "output": 14,
+          "cacheRead": 0.875
+        }
+      },
+      "configuredModelId": "c610925d-e884-4eef-bad0-f17d971a6287",
+      "configuredAt": 1791882355724
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/o3-flex",
+        "displayName": "openai/o3 Flex"
+      },
+      "configuredModelId": "37a87df1-353e-4bd7-8bcd-df578f3eede8",
+      "configuredAt": 1791882355724
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/o3-pro",
+        "displayName": "openai/o3-pro",
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 200000,
+          "output": 100000
+        },
+        "reasoning": true,
+        "toolCall": true,
+        "releaseDate": "2025-06-10",
+        "cost": {
+          "input": 27.508,
+          "output": 110.032
+        }
+      },
+      "configuredModelId": "eade6cb5-8a3c-44ec-a1c4-e7b6fd5cc24c",
+      "configuredAt": 1791882355725
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/text-embedding-3-large",
+        "displayName": "openai/text-embedding-3-large",
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 8192,
+          "output": 1536,
+          "input": 6656
+        },
+        "reasoning": false,
+        "toolCall": false,
+        "isEmbedding": true,
+        "releaseDate": "2024-01-25"
+      },
+      "configuredModelId": "86e9b953-dc0c-4ff4-821e-1fc57bada0ad",
+      "configuredAt": 1791882355725
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/text-embedding-3-small",
+        "displayName": "openai/text-embedding-3-small",
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 8192,
+          "output": 1536,
+          "input": 6656
+        },
+        "reasoning": false,
+        "toolCall": false,
+        "isEmbedding": true,
+        "releaseDate": "2024-01-25"
+      },
+      "configuredModelId": "6c348609-cb75-48ef-a612-7ed5c187fe5e",
+      "configuredAt": 1791882355726
+    },
+    {
+      "providerId": "37c0dc04-a95d-4255-921b-7df0a174c616",
+      "info": {
+        "id": "openai/text-embedding-ada-002",
+        "displayName": "openai/text-embedding-ada-002",
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 8192,
+          "output": 1536,
+          "input": 6656
+        },
+        "reasoning": false,
+        "toolCall": false,
+        "isEmbedding": true,
+        "releaseDate": "2022-12-15"
+      },
+      "configuredModelId": "4d77d08c-3bcb-430c-81d2-9363696c0303",
+      "configuredAt": 1791882355726
+    },
+    {
+      "configuredModelId": "02bb7399-ecf7-4f71-ac01-140d9885f4fb",
+      "providerId": "a4bb7605-fb20-474b-b800-e70a05d8ce89",
+      "info": {
+        "id": "Qwen/Qwen3.8-27B",
+        "displayName": "Qwen/Qwen3.8-27B"
+      },
+      "configuredAt": 1790773949691
+    },
+    {
+      "configuredModelId": "c2ec5af8-7f73-4e9a-be2a-c799808bce3c",
+      "providerId": "a4bb7605-fb20-474b-b800-e70a05d8ce89",
+      "info": {
+        "id": "google/gemma-4-26B-A4B-it",
+        "displayName": "google/gemma-4-26B-A4B-it"
+      },
+      "configuredAt": 1790773949691
+    },
+    {
+      "configuredModelId": "4a187448-4bb4-4d9a-ab7d-18f9e74b17cd",
+      "providerId": "a4bb7605-fb20-474b-b800-e70a05d8ce89",
+      "info": {
+        "id": "deepseek-ai/DeepSeek-V4.1-Flash",
+        "displayName": "deepseek-ai/DeepSeek-V4.1-Flash"
+      },
+      "configuredAt": 1790773949691
+    },
+    {
+      "configuredModelId": "aa501c83-7b58-4849-a985-d62303eca242",
+      "providerId": "a4bb7605-fb20-474b-b800-e70a05d8ce89",
+      "info": {
+        "id": "zai-org/GLM-5.3-Flash",
+        "displayName": "zai-org/GLM-5.3-Flash"
+      },
+      "configuredAt": 1790773949691
+    }
+  ],
+  "backends": {
+    "opencode": {
+      "enabledModels": [
+        "02bb7399-ecf7-4f71-ac01-140d9885f4fb",
+        "c2ec5af8-7f73-4e9a-be2a-c799808bce3c",
+        "4a187448-4bb4-4d9a-ab7d-18f9e74b17cd",
+        "aa501c83-7b58-4849-a985-d62303eca242"
+      ]
+    },
+    "chat": {
+      "enabledModels": [
+        "02bb7399-ecf7-4f71-ac01-140d9885f4fb",
+        "c2ec5af8-7f73-4e9a-be2a-c799808bce3c",
+        "4a187448-4bb4-4d9a-ab7d-18f9e74b17cd",
+        "aa501c83-7b58-4849-a985-d62303eca242"
+      ]
+    },
+    "claude": {
+      "enabledModels": [
+        "585fef06-1e83-4407-a5f3-2db66cab9a74",
+        "32bae49e-9a7d-4b56-9d8d-0f69c36001a0",
+        "f6d3dbb2-6094-4d84-9cdc-eb6732b73eec",
+        "b5e1bec7-1e51-4f3b-aba4-791484e2c424",
+        "f7427df5-ba31-4944-a75e-603e3ce7609c",
+        "c6558e60-2463-45aa-bc43-1e36c701f1aa",
+        "cef4c35f-6ba8-42ab-852f-346f6cf46325",
+        "ff2f19d8-0228-4e83-9a31-9e239ef07332",
+        "6724215c-7917-4f83-992c-1240006e5e9d",
+        "959d7002-d2c4-4779-be46-0123676e33b3",
+        "41c37201-fc28-4459-932c-8969fb946ddc"
+      ]
+    }
+  },
+  "copilotPlusCatalog": {
+    "models": [
+      {
+        "id": "copilot-plus-flash",
+        "displayName": "Copilot Plus Flash",
+        "description": "The default model: fastest responses and the most quota.",
+        "toolCall": true,
+        "reasoning": true,
+        "reasoningEfforts": [],
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 1048576
+        }
+      },
+      {
+        "id": "glm-5.2",
+        "displayName": "GLM-5.2",
+        "description": "A frontier open-weight model.",
+        "toolCall": true,
+        "reasoning": true,
+        "reasoningEfforts": [
+          "none",
+          "high"
+        ],
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 1048576
+        }
+      },
+      {
+        "id": "glm-5.3-flash",
+        "displayName": "GLM-5.3-Flash",
+        "description": "Fast, cost-efficient coding and long-horizon agent tasks.",
+        "toolCall": true,
+        "reasoning": true,
+        "reasoningEfforts": [],
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 1048576
+        }
+      },
+      {
+        "id": "deepseek-v4-pro",
+        "displayName": "DeepSeek V4 Pro",
+        "description": "A top-tier model for the hardest reasoning and agentic tasks.",
+        "toolCall": true,
+        "reasoning": true,
+        "reasoningEfforts": [],
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 1048576
+        }
+      },
+      {
+        "id": "deepseek-v4-flash-0731",
+        "displayName": "DeepSeek V4 Flash 0731",
+        "description": "The July 2026 DeepSeek V4 Flash snapshot: fast, cheap, and broadly capable.",
+        "toolCall": true,
+        "reasoning": true,
+        "reasoningEfforts": [
+          "none",
+          "high"
+        ],
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 1048576
+        }
+      },
+      {
+        "id": "deepseek-v4.1-flash",
+        "displayName": "DeepSeek V4.1 Flash",
+        "description": "Fast multimodal reasoning for coding and agentic tasks.",
+        "toolCall": true,
+        "reasoning": true,
+        "reasoningEfforts": [],
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 1048576
+        }
+      },
+      {
+        "id": "mimo-v2.6-flash",
+        "displayName": "MiMo V2.6 Flash",
+        "description": "Cost-effective model for everyday use.",
+        "toolCall": true,
+        "reasoning": true,
+        "reasoningEfforts": [],
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 1048576
+        }
+      },
+      {
+        "id": "minimax-m3",
+        "displayName": "MiniMax M3",
+        "description": "Long-context model for coding and agentic tasks.",
+        "toolCall": true,
+        "reasoning": true,
+        "reasoningEfforts": [],
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 524288
+        }
+      }
+    ],
+    "defaultEnabledIds": [
+      "copilot-plus-flash",
+      "glm-5.2",
+      "glm-5.3-flash",
+      "deepseek-v4-pro",
+      "deepseek-v4.1-flash",
+      "minimax-m3"
+    ]
+  },
+  "miyoConnectionMode": "local",
+  "_keychainVaultId": "aca0e6af",
+  "settingsVersion": 14
+}
